@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--color-bg-dark);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 74px 0 76px;
+}

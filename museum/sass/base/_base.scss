@@ -32,4 +32,5 @@ body {
   @extend %font-primary;
   @include font;
   color: var(--color-text-light);
+  background-color: var(--color-bg-light);
 }

@@ -1,0 +1,22 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  &__link {
+    margin-left: 76px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      @include font($weight: 100, $height: 50px);
+      text-decoration: none;
+      color: var(--color-text-light);
+      letter-spacing: 2px;
+      &:hover {
+        color: var(--color-hover);
+        @extend %transition;
+      }
+    }
+  }
+}
