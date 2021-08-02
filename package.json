@@ -1,0 +1,24 @@
+{
+  "name": "liubomyr86-jsfepreschool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.37.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "style": "sass --watch museum/sass/style.scss museum/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/liubomyr86-JSFEPRESCHOOL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/liubomyr86-JSFEPRESCHOOL/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/liubomyr86-JSFEPRESCHOOL#readme"
+}
