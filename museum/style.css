@@ -432,11 +432,15 @@ h1, h2, h3, h4, h5, h6, p {
   --color-main-btn: #710707;
 }
 
-body {
+.btn, body {
   font-family: "Roboto", sans-serif;
 }
 
-.navigation__link a:hover, .logo__img:hover {
+h3, h2 {
+  font-family: "Forum", cursive;
+}
+
+.btn, .navigation__link a:hover, .logo__img:hover {
   transition: all 0.3s ease-out;
 }
 
@@ -465,6 +469,10 @@ body {
   src: url("../../assets/fonts/Forum/Forum-Regular.ttf");
   font-weight: 400;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 22px;
   font-weight: 300;
@@ -472,6 +480,20 @@ body {
   font-style: normal;
   color: var(--color-text-light);
   background-color: var(--color-bg-light);
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  font-style: normal;
 }
 
 .container {
@@ -498,6 +520,8 @@ body {
 .navigation {
   display: flex;
   align-items: center;
+  max-width: 720px;
+  margin: 0;
 }
 .navigation__link {
   margin-left: 76px;
@@ -510,12 +534,34 @@ body {
   font-weight: 100;
   line-height: 50px;
   font-style: normal;
-  text-decoration: none;
   color: var(--color-text-light);
+  text-decoration: none;
   letter-spacing: 2px;
 }
 .navigation__link a:hover {
   color: var(--color-hover);
+}
+
+.btn {
+  display: inline-block;
+  padding: 26px 67px;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 26px;
+  font-style: normal;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.btn_bordered {
+  color: var(--color-text-dark);
+}
+.btn_colored {
+  color: var(--color-text-light);
+  background-color: var(--color-main-btn);
+}
+.btn_colored:hover {
+  background-color: var(--color-hover);
 }
 
 .header {
@@ -525,8 +571,37 @@ body {
 .header__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 74px 0 76px;
+  padding: 74px 0 64px;
+}
+
+.welcome {
+  min-height: 750px;
+  background-color: var(--color-bg-dark);
+  background-image: url("../../assets/img/background.jpg");
+  background-size: 1215px 750px;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 352px) 100%;
+}
+
+.welcome__title {
+  padding-top: 113px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.welcome__content {
+  margin-top: 26px;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 33px;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.welcome__btn {
+  margin-top: 76px;
+  width: 360px;
+  height: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

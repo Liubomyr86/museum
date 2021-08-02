@@ -28,9 +28,23 @@
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @extend %font-primary;
   @include font;
   color: var(--color-text-light);
   background-color: var(--color-bg-light);
+}
+
+h2 {
+  @extend %font-title;
+  @include font($size: 80px, $height: 90px, $weight: 400);
+}
+
+h3 {
+  @extend %font-title;
+  @include font($size: 32px, $height: 35px, $weight: 400);
 }
