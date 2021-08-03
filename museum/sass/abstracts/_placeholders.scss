@@ -9,3 +9,13 @@
 %transition {
   transition: all 0.3s ease-out;
 }
+
+%underline-title {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-main-btn);
+}

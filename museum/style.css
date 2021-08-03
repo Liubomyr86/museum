@@ -444,6 +444,16 @@ h3, h2 {
   transition: all 0.3s ease-out;
 }
 
+.explorer__title::after, .visiting__title::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-main-btn);
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../../assets/fonts/Roboto/Roboto-Thin.ttf");
@@ -606,21 +616,11 @@ h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
-.visiting__title::after {
-  content: "";
-  position: absolute;
-  bottom: -28px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: var(--color-main-btn);
-}
-
 .visiting__cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 76px 60px;
-  margin-top: 103px;
+  margin: 103px 0 75px;
 }
 
 .visiting-card {
@@ -658,6 +658,32 @@ h3 {
 }
 .visiting-card:hover .visiting-card__title::after {
   width: 100%;
+}
+
+.explorer {
+  background-color: var(--color-bg-dark);
+}
+.explorer__container {
+  display: flex;
+  gap: 60px;
+  padding: 75px 0;
+}
+.explorer__title {
+  position: relative;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.explorer__content {
+  margin-top: 25px;
+}
+.explorer__content:first-of-type {
+  margin-top: 103px;
+}
+.explorer__content span {
+  color: #caaa7d;
+}
+.explorer__img {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

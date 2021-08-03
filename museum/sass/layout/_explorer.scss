@@ -1,0 +1,35 @@
+.explorer {
+  background-color: var(--color-bg-dark);
+
+  &__container {
+    display: flex;
+    gap: 60px;
+    padding: 75px 0;
+  }
+
+  &__title {
+    position: relative;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      @extend %underline-title;
+    }
+  }
+
+  &__content {
+    margin-top: 25px;
+
+    &:first-of-type {
+      margin-top: 103px;
+    }
+
+    span {
+      color: #caaa7d;
+    }
+  }
+
+  &__img {
+    margin-top: 15px;
+  }
+}

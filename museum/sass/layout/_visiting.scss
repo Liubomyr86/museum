@@ -6,13 +6,7 @@
   text-transform: uppercase;
 
   &::after {
-    content: "";
-    position: absolute;
-    bottom: -28px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: var(--color-main-btn);
+    @extend %underline-title;
   }
 }
 
@@ -20,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 76px 60px;
-  margin-top: 103px;
+  margin: 103px 0 75px;
 }
 
 .visiting-card {
