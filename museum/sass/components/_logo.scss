@@ -2,17 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.logo__img {
-  display: inline-block;
-  width: 195px;
-  height: 50px;
-  background-image: url("./assets/svg/logo.svg");
+  &__img {
+    display: inline-block;
+    width: 195px;
+    height: 50px;
+    background-image: url("./assets/svg/logo.svg");
 
-  &:hover {
-    @extend %transition;
-    filter: invert(61%) sepia(11%) saturate(1002%) hue-rotate(356deg)
-      brightness(87%) contrast(88%);
+    &:hover {
+      @extend %transition;
+      filter: invert(61%) sepia(11%) saturate(1002%) hue-rotate(356deg)
+        brightness(87%) contrast(88%);
+    }
   }
 }

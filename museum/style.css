@@ -440,7 +440,7 @@ h3, h2 {
   font-family: "Forum", cursive;
 }
 
-.btn, .navigation__link a:hover, .logo__img:hover {
+.visiting-card:hover .visiting-card__title::after, .btn, .navigation__link a:hover, .logo__img:hover {
   transition: all 0.3s ease-out;
 }
 
@@ -506,7 +506,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
-
 .logo__img {
   display: inline-block;
   width: 195px;
@@ -567,7 +566,6 @@ h3 {
 .header {
   background-color: var(--color-bg-dark);
 }
-
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -577,18 +575,16 @@ h3 {
 .welcome {
   min-height: 750px;
   background-color: var(--color-bg-dark);
-  background-image: url("../../assets/img/background.jpg");
+  background-image: url("./assets/img/background.jpg");
   background-size: 1215px 750px;
   background-repeat: no-repeat;
   background-position: calc(50% + 352px) 100%;
 }
-
 .welcome__title {
   padding-top: 113px;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
-
 .welcome__content {
   margin-top: 26px;
   font-size: 28px;
@@ -597,11 +593,71 @@ h3 {
   font-style: normal;
   letter-spacing: 2px;
 }
-
 .welcome__btn {
   margin-top: 76px;
   width: 360px;
   height: 75px;
+}
+
+.visiting__title {
+  position: relative;
+  margin-top: 75px;
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.visiting__title::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-main-btn);
+}
+
+.visiting__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 76px 60px;
+  margin-top: 103px;
+}
+
+.visiting-card {
+  text-decoration: none;
+  color: var(--color-text-dark);
+}
+.visiting-card__title {
+  position: relative;
+  margin-top: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.visiting-card__title::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: var(--color-main-btn);
+}
+.visiting-card__subtitle {
+  margin-top: 21px;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 26px;
+  font-style: normal;
+}
+.visiting-card__content {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 21px;
+  font-style: normal;
+}
+.visiting-card:hover .visiting-card__title::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

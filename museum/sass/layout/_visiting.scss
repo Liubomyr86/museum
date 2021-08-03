@@ -1,0 +1,63 @@
+.visiting__title {
+  position: relative;
+  margin-top: 75px;
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--color-main-btn);
+  }
+}
+
+.visiting__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 76px 60px;
+  margin-top: 103px;
+}
+
+.visiting-card {
+  text-decoration: none;
+  color: var(--color-text-dark);
+
+  &__title {
+    position: relative;
+    margin-top: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 300px;
+      height: 2px;
+      background-color: var(--color-main-btn);
+    }
+  }
+
+  &__subtitle {
+    margin-top: 21px;
+    @include font($weight: 200, $height: 26px);
+  }
+
+  &__content {
+    margin-top: 10px;
+    @include font($size: 18px, $weight: 200, $height: 21px);
+  }
+
+  &:hover {
+    .visiting-card__title::after {
+      width: 100%;
+      @extend %transition;
+    }
+  }
+}

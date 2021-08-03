@@ -5,22 +5,22 @@
   background-size: 1215px 750px;
   background-repeat: no-repeat;
   background-position: calc(50% + 352px) 100%;
-}
 
-.welcome__title {
-  padding-top: 113px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
+  &__title {
+    padding-top: 113px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
 
-.welcome__content {
-  margin-top: 26px;
-  @include font($size: 28px, $height: 33px);
-  letter-spacing: 2px;
-}
+  &__content {
+    margin-top: 26px;
+    @include font($size: 28px, $height: 33px);
+    letter-spacing: 2px;
+  }
 
-.welcome__btn {
-  margin-top: 76px;
-  width: 360px;
-  height: 75px;
+  &__btn {
+    margin-top: 76px;
+    width: 360px;
+    height: 75px;
+  }
 }
