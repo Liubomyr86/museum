@@ -20,6 +20,7 @@
 .visiting-card {
   text-decoration: none;
   color: var(--color-text-dark);
+  @extend %transition;
 
   &__title {
     position: relative;
@@ -35,6 +36,7 @@
       width: 300px;
       height: 2px;
       background-color: var(--color-main-btn);
+      @extend %transition;
     }
   }
 
@@ -49,9 +51,11 @@
   }
 
   &:hover {
+    transform: scale(1.06);
+    @extend %transition;
+
     .visiting-card__title::after {
       width: 100%;
-      @extend %transition;
     }
   }
 }

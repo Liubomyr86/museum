@@ -440,7 +440,7 @@ h3, h2 {
   font-family: "Forum", cursive;
 }
 
-.visiting-card:hover .visiting-card__title::after, .btn, .navigation__link a:hover, .logo__img:hover {
+.visiting-card:hover, .visiting-card__title::after, .visiting-card, .video-player__ico, .video-player__play, .btn, .navigation__link a:hover, .logo__img:hover {
   transition: all 0.3s ease-out;
 }
 
@@ -573,6 +573,88 @@ h3 {
   background-color: var(--color-hover);
 }
 
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico-big-play {
+  width: 220px;
+  height: 220px;
+  background-image: url("./assets/svg/big-play.svg");
+}
+
+.ico-prev {
+  width: 27px;
+  height: 30px;
+  background-image: url("./assets/svg/prev-next.svg");
+}
+
+.ico-play {
+  width: 23px;
+  height: 30px;
+  background-image: url("./assets/svg/play.svg");
+}
+
+.ico-next {
+  width: 27px;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url("./assets/svg/prev-next.svg");
+}
+
+.ico-sound {
+  width: 38px;
+  height: 30px;
+  background-image: url("./assets/svg/sound.svg");
+}
+
+.ico-fullscreen {
+  width: 36px;
+  height: 36px;
+  background-image: url("./assets/svg/fullscreen.svg");
+}
+
+.video-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 714px;
+  margin: 90px 0 40px;
+}
+.video-player__play {
+  position: absolute;
+  top: calc(50% - 45px);
+  right: calc(50% - 220px);
+  transform: translate(-50%, -50%);
+}
+.video-player__play:hover {
+  filter: invert(73%) sepia(11%) saturate(0%) hue-rotate(211deg) brightness(130%) contrast(91%);
+}
+.video-player__controls {
+  display: flex;
+  align-items: center;
+  min-height: 85px;
+  background-color: var(--color-text-dark);
+}
+.video-player__ico {
+  margin-left: 41px;
+}
+.video-player__ico:last-of-type {
+  margin-left: 48px;
+}
+.video-player__ico:hover {
+  filter: invert(73%) sepia(11%) saturate(0%) hue-rotate(211deg) brightness(130%) contrast(91%);
+}
+.video-player__timeline {
+  margin-left: 41px;
+  width: 820px;
+}
+.video-player__volume {
+  margin-left: 20px;
+  width: 155px;
+}
+
 .header {
   background-color: var(--color-bg-dark);
 }
@@ -656,6 +738,9 @@ h3 {
   line-height: 21px;
   font-style: normal;
 }
+.visiting-card:hover {
+  transform: scale(1.06);
+}
 .visiting-card:hover .visiting-card__title::after {
   width: 100%;
 }
@@ -684,6 +769,21 @@ h3 {
 }
 .explorer__img {
   margin-top: 15px;
+}
+
+.video__cotainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.video__title {
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.video__content {
+  max-width: 720px;
+  color: var(--color-text-dark);
 }
 
 /*# sourceMappingURL=style.css.map */

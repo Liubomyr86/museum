@@ -1,0 +1,41 @@
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ico-big-play {
+  width: 220px;
+  height: 220px;
+  background-image: url("./assets/svg/big-play.svg");
+}
+
+.ico-prev {
+  width: 27px;
+  height: 30px;
+  background-image: url("./assets/svg/prev-next.svg");
+}
+
+.ico-play {
+  width: 23px;
+  height: 30px;
+  background-image: url("./assets/svg/play.svg");
+}
+
+.ico-next {
+  width: 27px;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url("./assets/svg/prev-next.svg");
+}
+
+.ico-sound {
+  width: 38px;
+  height: 30px;
+  background-image: url("./assets/svg/sound.svg");
+}
+
+.ico-fullscreen {
+  width: 36px;
+  height: 36px;
+  background-image: url("./assets/svg/fullscreen.svg");
+}
