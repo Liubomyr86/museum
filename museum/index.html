@@ -32,7 +32,7 @@
             <li class="navigation__link"><a href="#visiting">Visiting</a></li>
             <li class="navigation__link"><a href="#explorer">Explore</a></li>
             <li class="navigation__link"><a href="#video">Video</a></li>
-            <li class="navigation__link"><a href="">Tickets</a></li>
+            <li class="navigation__link"><a href="#tickets">Tickets</a></li>
             <li class="navigation__link"><a href="">Contacts</a></li>
           </ul>
         </nav>
@@ -199,7 +199,100 @@
           </div>
         </div>
       </section>
-      <section></section>
+      <section class="tickets" id="tickets">
+        <div class="container tickets__container">
+          <h2 class="tickets__title">Buy tickets</h2>
+          <div class="tickets__content">
+            <img
+              src="./assets/img/tickets-img.jpg"
+              alt="picture"
+              class="tickets__img"
+              width="720"
+              height="550"
+            />
+            <div class="tickets__controls">
+              <div class="tickets__type">
+                <p class="tickets__subtitle">Ticket Type</p>
+                <label class="ticket-type__container"
+                  >Permanent exhibition
+                  <input type="radio" checked="checked" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="ticket-type__container"
+                  >Temporary exhibition
+                  <input type="radio" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="ticket-type__container"
+                  >Combined Admission
+                  <input type="radio" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="tickets__amount">
+                <div class="tickets__amount-container">
+                  <p class="tickets__subtitle tickets__subtitle_end">Amount</p>
+                  <p class="ticket-amount__text">Basic 18+</p>
+                  <div class="ticket-amount__container">
+                    <button
+                      class="btn ticket-amount__btn"
+                      type="button"
+                      onclick="this.nextElementSibling.stepDown()"
+                    >
+                      –
+                    </button>
+                    <input
+                      type="number"
+                      min="0"
+                      max="9"
+                      value="1"
+                      readonly
+                      class="ticket-amount__number"
+                    />
+                    <button
+                      class="btn ticket-amount__btn"
+                      type="button"
+                      onclick="this.previousElementSibling.stepUp()"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p class="ticket-amount__text">Senior 65+</p>
+                  <div class="ticket-amount__container">
+                    <button
+                      class="btn ticket-amount__btn"
+                      type="button"
+                      onclick="this.nextElementSibling.stepDown()"
+                    >
+                      –
+                    </button>
+                    <input
+                      type="number"
+                      min="0"
+                      max="9"
+                      value="1"
+                      readonly
+                      class="ticket-amount__number"
+                    />
+                    <button
+                      class="btn ticket-amount__btn"
+                      type="button"
+                      onclick="this.previousElementSibling.stepUp()"
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p class="ticket-amount__total">Total €<span>220</span></p>
+                </div>
+
+                <button class="btn btn_colored tickets__btn" type="button">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section></section>
     </main>
     <footer class="footer"></footer>

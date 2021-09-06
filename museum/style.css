@@ -440,11 +440,11 @@ h3, h2 {
   font-family: "Forum", cursive;
 }
 
-.visiting-card:hover, .visiting-card__title::after, .visiting-card, .video-player__ico, .video-player__play, .btn, .navigation__link a:hover, .logo__img:hover {
+.ticket-type__container:hover input ~ .checkmark, .ticket-type__container:hover, .ticket-type__container, .visiting-card:hover, .visiting-card__title::after, .visiting-card, .video-player__ico, .video-player__play, .btn, .navigation__link a:hover, .logo__img:hover {
   transition: all 0.3s ease-out;
 }
 
-.explorer__title::after, .visiting__title::after {
+.tickets__title::after, .explorer__title::after, .visiting__title::after {
   content: "";
   position: absolute;
   bottom: -28px;
@@ -553,21 +553,14 @@ h3 {
 
 .btn {
   display: inline-block;
-  padding: 26px 67px;
-  font-size: 22px;
-  font-weight: 100;
-  line-height: 26px;
-  font-style: normal;
-  border-radius: 10px;
-  letter-spacing: 2px;
   text-decoration: none;
+  cursor: pointer;
 }
 .btn_bordered {
   color: var(--color-text-dark);
 }
 .btn_colored {
   color: var(--color-text-light);
-  background-color: var(--color-main-btn);
 }
 .btn_colored:hover {
   background-color: var(--color-hover);
@@ -686,9 +679,17 @@ h3 {
   letter-spacing: 2px;
 }
 .welcome__btn {
+  padding: 26px 67px;
   margin-top: 76px;
   width: 360px;
   height: 75px;
+  background-color: var(--color-main-btn);
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 26px;
+  font-style: normal;
+  border-radius: 10px;
+  letter-spacing: 2px;
 }
 
 .visiting__title {
@@ -775,6 +776,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 75px;
 }
 .video__title {
   color: var(--color-hover);
@@ -784,6 +786,153 @@ h3 {
 .video__content {
   max-width: 720px;
   color: var(--color-text-dark);
+}
+
+.tickets {
+  background-color: var(--color-bg-dark);
+}
+.tickets__container {
+  padding: 75px 0;
+}
+.tickets__title {
+  position: relative;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.tickets__content {
+  display: flex;
+  gap: 60px;
+  margin-top: 103px;
+}
+.tickets__controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 239px;
+}
+.tickets__type {
+  display: flex;
+  flex-direction: column;
+}
+.tickets__subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33px;
+  font-style: normal;
+}
+.tickets__subtitle_end {
+  padding-left: 50px;
+  margin-bottom: 11px;
+}
+.tickets__amount-container {
+  padding-left: 25px;
+}
+.tickets__btn {
+  width: 174px;
+  height: 50px;
+  border-radius: 2px;
+  border: 0 solid var(--color-bg-dark);
+  color: var(--color-bg-dark);
+  letter-spacing: 2px;
+}
+
+.ticket-type__container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 49px;
+  line-height: 26px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default radio button */
+  /* On mouse-over, add a grey background color */
+  /* Style the indicator (dot/circle) */
+}
+.ticket-type__container:hover {
+  color: var(--color-hover);
+}
+.ticket-type__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  /* When the radio button is checked, add a dark background */
+  /* Show the indicator (dot/circle) when checked */
+}
+.ticket-type__container input:checked ~ .checkmark {
+  background-color: var(--color-bg-dark);
+}
+.ticket-type__container input:checked ~ .checkmark:after {
+  display: block;
+}
+.ticket-type__container:hover input ~ .checkmark {
+  background-color: var(--color-hover);
+}
+.ticket-type__container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.ticket-amount__text {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  font-style: normal;
+}
+.ticket-amount__container {
+  margin: 13px 0 35px;
+  border: 3px solid var(--color-bg-light);
+}
+.ticket-amount__total {
+  margin: 50px 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33px;
+  font-style: normal;
+  letter-spacing: 1.6px;
+}
+.ticket-amount__btn {
+  padding: 3px 9px;
+  background-color: var(--color-bg-dark);
+  border: 0 solid var(--color-bg-dark);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 37px;
+  font-style: normal;
+  text-align: center;
+}
+.ticket-amount__number {
+  margin-left: 17px;
+  background-color: var(--color-bg-dark);
+  border: 0 solid var(--color-bg-dark);
+  width: 38px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
