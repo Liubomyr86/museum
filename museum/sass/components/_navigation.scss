@@ -24,3 +24,17 @@
     }
   }
 }
+
+.navigation-footer {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 620px;
+  max-height: 150px;
+  &__link {
+    margin: 0;
+    &:nth-child(n + 4) {
+      padding-right: 100px;
+    }
+  }
+}

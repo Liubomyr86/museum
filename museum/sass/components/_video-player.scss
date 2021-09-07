@@ -36,6 +36,7 @@
     &:hover {
       filter: invert(73%) sepia(11%) saturate(0%) hue-rotate(211deg)
         brightness(130%) contrast(91%);
+      @extend %transition;
     }
   }
 

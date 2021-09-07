@@ -140,9 +140,13 @@
     padding: 3px 9px;
     background-color: var(--color-bg-dark);
     border: 0 solid var(--color-bg-dark);
-    // width: 18px;
     @include font($size: 32px, $height: 37px, $weight: 400);
     text-align: center;
+    @extend %transition;
+    &:hover {
+      color: var(--color-hover);
+      @extend %transition;
+    }
   }
   &__number {
     margin-left: 17px;

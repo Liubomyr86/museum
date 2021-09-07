@@ -430,6 +430,7 @@ h1, h2, h3, h4, h5, h6, p {
   --color-text-light: #ffffff;
   --color-hover: #9d8665;
   --color-main-btn: #710707;
+  --color-social-border: #666666;
 }
 
 .btn, body {
@@ -440,7 +441,7 @@ h3, h2 {
   font-family: "Forum", cursive;
 }
 
-.ticket-type__container:hover input ~ .checkmark, .ticket-type__container:hover, .ticket-type__container, .visiting-card:hover, .visiting-card__title::after, .visiting-card, .video-player__ico, .video-player__play, .btn, .navigation__link a:hover, .logo__img:hover {
+.footer__ico, .ticket-amount__btn:hover, .ticket-amount__btn, .ticket-type__container:hover input ~ .checkmark, .ticket-type__container:hover, .ticket-type__container, .visiting-card:hover, .visiting-card__title::after, .visiting-card, .video-player__ico:hover, .video-player__ico, .video-player__play, .btn, .navigation__link a:hover, .logo__img:hover, .logo__img {
   transition: all 0.3s ease-out;
 }
 
@@ -551,6 +552,20 @@ h3 {
   color: var(--color-hover);
 }
 
+.navigation-footer {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 620px;
+  max-height: 150px;
+}
+.navigation-footer__link {
+  margin: 0;
+}
+.navigation-footer__link:nth-child(n+4) {
+  padding-right: 100px;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -606,6 +621,41 @@ h3 {
   width: 36px;
   height: 36px;
   background-image: url("./assets/svg/fullscreen.svg");
+}
+
+.ico-youtube {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/svg/social/Youtube.svg");
+}
+
+.ico-instagram {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/svg/social/Instagram.svg");
+}
+
+.ico-facebook {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/svg/social/Facebook.svg");
+}
+
+.ico-twitter {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/svg/social/Twitter.svg");
+}
+
+.ico-pinterest {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  background-image: url("./assets/svg/social/Pinterest.svg");
 }
 
 .video-player {
@@ -676,6 +726,19 @@ h3 {
   font-weight: 300;
   line-height: 26px;
   font-style: normal;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 336px;
+  margin: 0;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
 .header {
@@ -953,6 +1016,9 @@ h3 {
   font-style: normal;
   text-align: center;
 }
+.ticket-amount__btn:hover {
+  color: var(--color-hover);
+}
 .ticket-amount__number {
   margin-left: 17px;
   background-color: var(--color-bg-dark);
@@ -975,10 +1041,37 @@ h3 {
 .contacts__content {
   display: flex;
   gap: 202px;
-  margin-top: 103px;
+  margin: 103px 0 61px;
 }
 .contacts__address {
   margin-top: 10px;
+}
+
+.footer {
+  background-color: var(--color-bg-dark);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 0;
+}
+.footer__logo {
+  align-items: flex-start;
+}
+.footer__social {
+  display: flex;
+}
+.footer__ico {
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 0 1.5px var(--color-social-border);
+  box-shadow: inset 0 0 0 1.5px var(--color-social-border);
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+.footer__ico:hover {
+  transform: scale(1.06);
+  box-shadow: inset 0 0 0 1.5px var(--color-hover);
 }
 
 /*# sourceMappingURL=style.css.map */

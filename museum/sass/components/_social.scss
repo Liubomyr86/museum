@@ -1,0 +1,12 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 336px;
+  margin: 0;
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+}
