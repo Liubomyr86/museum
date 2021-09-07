@@ -444,7 +444,7 @@ h3, h2 {
   transition: all 0.3s ease-out;
 }
 
-.tickets__title::after, .explorer__title::after, .visiting__title::after {
+.contacts__title::after, .tickets__title::after, .explorer__title::after, .visiting__title::after {
   content: "";
   position: absolute;
   bottom: -28px;
@@ -646,6 +646,36 @@ h3 {
 .video-player__volume {
   margin-left: 20px;
   width: 155px;
+}
+
+.address__text {
+  display: flex;
+  flex-direction: column;
+}
+.address__text p,
+.address__text a {
+  color: var(--color-bg-dark);
+}
+.address__text p {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33px;
+  font-style: normal;
+}
+.address__text p:last-of-type {
+  margin-top: 36px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  font-style: normal;
+}
+.address__text a {
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 26px;
+  font-style: normal;
 }
 
 .header {
@@ -933,6 +963,22 @@ h3 {
   font-weight: 300;
   line-height: 26px;
   font-style: normal;
+}
+
+.contacts__title {
+  position: relative;
+  margin-top: 75px;
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.contacts__content {
+  display: flex;
+  gap: 202px;
+  margin-top: 103px;
+}
+.contacts__address {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
