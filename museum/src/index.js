@@ -17,3 +17,5 @@
 
 // render();
 // import './sass/style.scss'
+
+import * as createGallery from './js/gallery.js'
