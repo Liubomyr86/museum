@@ -1,5 +1,5 @@
 .tickets {
-  background-color: var(--color-bg-dark);
+  // background-color: var(--color-bg-dark);
 
   &__container {
     padding: 75px 0;
@@ -7,6 +7,7 @@
 
   &__title {
     position: relative;
+    color: var(--color-hover);
     letter-spacing: 5px;
     text-transform: uppercase;
 
@@ -25,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     gap: 239px;
+    color: var(--color-text-dark);
   }
 
   &__type {
@@ -34,10 +36,10 @@
 
   &__subtitle {
     @include font($size: 28px, $height: 33px, $weight: 700);
+    margin-bottom: 25px;
 
     &_end {
       padding-left: 50px;
-      margin-bottom: 11px;
     }
   }
   &__amount-container {
@@ -48,7 +50,7 @@
     height: 50px;
     border-radius: 2px;
     border: 0 solid var(--color-bg-dark);
-    color: var(--color-bg-dark);
+    color: var(--color-bg-light);
     letter-spacing: 2px;
   }
 }
@@ -57,7 +59,7 @@
   display: block;
   position: relative;
   padding-left: 40px;
-  margin-top: 49px;
+  margin-top: 25px;
   line-height: 26px;
   cursor: pointer;
   @extend %transition;
@@ -79,7 +81,7 @@
 
     /* When the radio button is checked, add a dark background */
     &:checked ~ .checkmark {
-      background-color: var(--color-bg-dark);
+      background-color: var(--color-bg-light);
     }
 
     /* Show the indicator (dot/circle) when checked */
@@ -101,7 +103,7 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: white;
+    background: var(--color-text-dark);
   }
 }
 
@@ -113,7 +115,7 @@
   height: 17px;
   width: 17px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-text-dark);
 
   /* Create the indicator (the dot/circle - hidden when not checked) */
   &::after {
@@ -128,17 +130,17 @@
     @include font($height: 26px);
   }
   &__container {
-    margin: 13px 0 35px;
-    border: 3px solid var(--color-bg-light);
+    margin: 15px 0 10px;
+    border: 3px solid var(--color-text-dark);
   }
   &__total {
-    margin: 50px 0;
+    margin: 50px 0 60px;
     @include font($size: 28px, $height: 33px, $weight: 700);
     letter-spacing: 1.6px;
   }
   &__btn {
-    padding: 3px 9px;
-    background-color: var(--color-bg-dark);
+    padding: 3px 8px;
+    background-color: var(--color-bg-light);
     border: 0 solid var(--color-bg-dark);
     @include font($size: 32px, $height: 37px, $weight: 400);
     text-align: center;
@@ -150,9 +152,9 @@
   }
   &__number {
     margin-left: 17px;
-    background-color: var(--color-bg-dark);
-    border: 0 solid var(--color-bg-dark);
-    width: 38px;
+    background-color: var(--color-bg-light);
+    border: 0 solid var(--color-bg-light);
+    width: 44px;
     text-align: center;
     @include font($height: 26px);
   }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +19,7 @@
     <title>Museum</title>
   </head>
   <body>
+    <h1 class="visuallyhidden" id="louvre">Louvre Museum</h1>
     <header class="header">
       <div class="container header__container">
         <div class="logo">
@@ -32,6 +32,7 @@
             <li class="navigation__link"><a href="#visiting">Visiting</a></li>
             <li class="navigation__link"><a href="#explorer">Explore</a></li>
             <li class="navigation__link"><a href="#video">Video</a></li>
+            <li class="navigation__link"><a href="#gallery">Gallery</a></li>
             <li class="navigation__link"><a href="#tickets">Tickets</a></li>
             <li class="navigation__link"><a href="#contacts">Contacts</a></li>
           </ul>
@@ -172,25 +173,25 @@
               width="1440"
               height="629"
             />
-            <span class="ico ico-big-play video-player__play"></span>
+            <button class="ico ico-big-play video-player__play"></button>
             <div class="video-player__controls">
-              <span class="ico ico-prev video-player__ico"></span>
-              <span class="ico ico-play video-player__ico"></span>
-              <span class="ico ico-next video-player__ico"></span>
+              <button class="ico ico-prev video-player__ico"></button>
+              <button class="ico ico-play video-player__ico"></button>
+              <button class="ico ico-next video-player__ico"></button>
               <input
                 class="video-player__timeline"
                 type="range"
                 name="video-timeline"
                 id="timeline"
               />
-              <span class="ico ico-sound video-player__ico"></span>
+              <button class="ico ico-sound video-player__ico"></button>
               <input
                 class="video-player__volume"
                 type="range"
                 name="video-volume"
                 id="volume"
               />
-              <span class="ico ico-fullscreen video-player__ico"></span>
+              <button class="ico ico-fullscreen video-player__ico"></button>
             </div>
           </div>
           <div class="video__cotainer">
@@ -202,7 +203,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container gallery__container">
           <h2 class="gallery__title">Art Gallery</h2>
           <div class="gallery__pictures">
@@ -255,7 +256,7 @@
                     <input
                       type="number"
                       min="0"
-                      max="9"
+                      max="20"
                       value="1"
                       readonly
                       class="ticket-amount__number"
@@ -280,7 +281,7 @@
                     <input
                       type="number"
                       min="0"
-                      max="9"
+                      max="20"
                       value="1"
                       readonly
                       class="ticket-amount__number"
@@ -335,15 +336,12 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="logo footer__logo">
-          <a href="#" class="logo__link">
+          <a href="#louvre" class="logo__link">
             <span class="logo__img"></span>
           </a>
         </div>
         <nav class="footer__navigation">
           <ul class="navigation navigation-footer">
-            <li class="navigation__link navigation-footer__link">
-              <a href="#welcome">Welcome</a>
-            </li>
             <li class="navigation__link navigation-footer__link">
               <a href="#visiting">Visiting</a>
             </li>
@@ -352,6 +350,9 @@
             </li>
             <li class="navigation__link navigation-footer__link">
               <a href="#video">Video</a>
+            </li>
+            <li class="navigation__link navigation-footer__link">
+              <a href="#gallery">Gallery</a>
             </li>
             <li class="navigation__link navigation-footer__link">
               <a href="#tickets">Tickets</a>

@@ -9,7 +9,7 @@
   }
 
   &_colored {
-    color: var(--color-text-light);
+    background-color: var(--color-text-dark);
 
     &:hover {
       background-color: var(--color-hover);
