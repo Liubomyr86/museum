@@ -30,11 +30,12 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 620px;
-  max-height: 150px;
+  max-height: 155px;
   &__link {
     margin: 0;
+    padding-bottom: 1px;
     &:nth-child(n + 4) {
-      padding-right: 100px;
+      padding-right: 88px;
     }
   }
 }
