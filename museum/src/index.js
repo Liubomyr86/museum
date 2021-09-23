@@ -18,4 +18,5 @@
 // render();
 // import './sass/style.scss'
 
-import * as createGallery from './js/gallery.js'
+import createGallery from './js/gallery.js'
+import changeValue from './js/video'

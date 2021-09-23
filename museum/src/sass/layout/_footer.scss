@@ -41,19 +41,22 @@
     a {
       text-decoration: none;
       color: var(--color-text-light);
+      @include font($weight: 100, $height: 22px);
+      letter-spacing: 2px;
       @extend %transition;
+
       &:hover {
         color: var(--color-hover);
+      }
+
+      &:first-of-type {
+        padding-left: 51px;
       }
     }
 
     p {
       @include font($weight: 100, $height: 22px);
       letter-spacing: 2px;
-    }
-
-    p:nth-child(2) {
-      padding-left: 51px;
     }
   }
 }

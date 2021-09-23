@@ -61,7 +61,7 @@
           <div class="visiting__cards-container">
             <a class="visiting-card" href="./tour2.html" target="blank">
               <img
-                src="./assets/img/Royal Palace.jpg"
+                src="./assets/img/visiting/Royal Palace.jpg"
                 alt="Royal Palace"
                 class="visiting-card__img"
                 width="440"
@@ -73,7 +73,7 @@
             </a>
             <a class="visiting-card" href="./tour3.html" target="blank ">
               <img
-                src="./assets/img/Denon Wing.jpg"
+                src="./assets/img/visiting/Denon Wing.jpg"
                 alt="Denon Wing"
                 class="visiting-card__img"
                 width="440"
@@ -85,7 +85,7 @@
             </a>
             <a class="visiting-card" href="./tour4.html" target="blank">
               <img
-                src="./assets/img/Colonnade Perrault.jpg"
+                src="./assets/img/visiting/Colonnade Perrault.jpg"
                 alt="Colonnade Perrault"
                 class="visiting-card__img"
                 width="440"
@@ -97,7 +97,7 @@
             </a>
             <a class="visiting-card" href="./tour5.html" target="blank">
               <img
-                src="./assets/img/Greek hall.jpg"
+                src="./assets/img/visiting/Greek hall.jpg"
                 alt="Greek hall"
                 class="visiting-card__img"
                 width="440"
@@ -109,7 +109,7 @@
             </a>
             <a class="visiting-card" href="./tour6.html" target="blank">
               <img
-                src="./assets/img/Mona Lisa.jpg"
+                src="./assets/img/visiting/Mona Lisa.jpg"
                 alt="Mona Lisa"
                 class="visiting-card__img"
                 width="440"
@@ -121,7 +121,7 @@
             </a>
             <a class="visiting-card" href="./tour7.html" target="blank">
               <img
-                src="./assets/img/Night Palace.jpg"
+                src="./assets/img/visiting/Night Palace.jpg"
                 alt="Night Palace"
                 class="visiting-card__img"
                 width="440"
@@ -155,7 +155,7 @@
           </div>
 
           <img
-            src="./assets/img/explorer-img.jpg"
+            src="./assets/img/explore-slider/before.jpg"
             alt="picture"
             class="explorer__img"
             width="720"
@@ -165,41 +165,212 @@
       </section>
       <section class="video" id="video">
         <div class="container">
-          <div class="video-player">
-            <img
-              class="video-player__poster"
-              src="./assets/img/video-player.jpg"
-              alt="poster"
-              width="1440"
-              height="629"
-            />
-            <button class="ico ico-big-play video-player__play"></button>
-            <div class="video-player__controls">
-              <button class="ico ico-prev video-player__ico"></button>
-              <button class="ico ico-play video-player__ico"></button>
-              <button class="ico ico-next video-player__ico"></button>
-              <input
-                class="video-player__timeline"
-                type="range"
-                name="video-timeline"
-                id="timeline"
-              />
-              <button class="ico ico-sound video-player__ico"></button>
-              <input
-                class="video-player__volume"
-                type="range"
-                name="video-volume"
-                id="volume"
-              />
-              <button class="ico ico-fullscreen video-player__ico"></button>
-            </div>
-          </div>
           <div class="video__cotainer">
             <h2 class="video__title">Video journey</h2>
             <p class="video__content">
               Enter and visit one of the most famous museums in the world and
               enjoy masterpieces such as Mona Lisa or Hammurabi's Code
             </p>
+          </div>
+          <div class="video-player">
+            <div class="main-video">
+              <div class="main-video__container">
+                <div class="main-video__item">
+                  <video
+                    class="main-video__video"
+                    src="./assets/video/video0.mp4"
+                    poster="./assets/video/poster0.jpg"
+                  ></video>
+                </div>
+                <div class="main-video__item">
+                  <video
+                    class="main-video__video"
+                    src="./assets/video/video1.mp4"
+                    poster="./assets/video/poster1.jpg"
+                  ></video>
+                </div>
+                <div class="main-video__item">
+                  <video
+                    class="main-video__video"
+                    src="./assets/video/video2.mp4"
+                    poster="./assets/video/poster2.jpg"
+                  ></video>
+                </div>
+                <div class="main-video__item">
+                  <video
+                    class="main-video__video"
+                    src="./assets/video/video3.mp4"
+                    poster="./assets/video/poster3.jpg"
+                  ></video>
+                </div>
+                <div class="main-video__item">
+                  <video
+                    class="main-video__video"
+                    src="./assets/video/video4.mp4"
+                    poster="./assets/video/poster4.jpg"
+                  ></video>
+                </div>
+              </div>
+              <button
+                class="btn ico-big-play main-video__play"
+                type="button"
+              ></button>
+              <div class="main-video__controls">
+                <button
+                  class="btn ico-play main-video__ico"
+                  type="button"
+                ></button>
+                <input
+                  class="main-video__timeline progress"
+                  type="range"
+                  value="54"
+                  min="0"
+                  max="100"
+                  step="1"
+                  name="video-timeline"
+                  id="timeline"
+                />
+                <button
+                  class="btn ico-sound main-video__ico"
+                  type="button"
+                ></button>
+                <input
+                  class="main-video__volume progress progress_volume"
+                  type="range"
+                  value="40"
+                  min="0"
+                  max="100"
+                  step="1"
+                  name="video-volume"
+                  id="volume"
+                />
+                <button
+                  class="btn ico-fullscreen main-video__ico"
+                  type="button"
+                ></button>
+              </div>
+            </div>
+            <div class="small-video">
+              <div class="small-video__container">
+                <div class="small-video__item">
+                  <iframe
+                    loading="lazy"
+                    width="452"
+                    height="254"
+                    src="https://www.youtube.com/embed/zp1BXPX8jcU"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                      html,body{height:100%}
+                      img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                      span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=https://www.youtube.com/embed/zp1BXPX8jcU?autoplay=1>
+                      <img src='./assets/img/video-slider/poster0.png' alt='Demo video'>
+                      </a>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="small-video__item">
+                  <iframe
+                    loading="lazy"
+                    width="452"
+                    height="254"
+                    src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                      html,body{height:100%}
+                      img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                      span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1>
+                      <img src='./assets/img/video-slider/poster1.png' alt='Demo video'>
+                      </a>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="small-video__item">
+                  <iframe
+                    loading="lazy"
+                    width="452"
+                    height="254"
+                    src="https://www.youtube.com/embed/NOhDysLnTvY"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                      html,body{height:100%}
+                      img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                      span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1>
+                      <img src='./assets/img/video-slider/poster2.png' alt='Demo video'>
+                      </a>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="small-video__item">
+                  <iframe
+                    loading="lazy"
+                    width="452"
+                    height="254"
+                    src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                      html,body{height:100%}
+                      img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                      span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1>
+                      <img src='./assets/img/video-slider/poster3.png' alt='Demo video'>
+                      </a>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="small-video__item">
+                  <iframe
+                    loading="lazy"
+                    width="452"
+                    height="254"
+                    src="https://www.youtube.com/embed/2OR0OCr6uRE"
+                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+                      html,body{height:100%}
+                      img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                      span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+                      </style>
+                      <a href=https://www.youtube.com/embed/Vi5D6FKhRmo?autoplay=1>
+                      <img src='./assets/img/video-slider/poster4.png' alt='Demo video'>
+                      </a>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="small-video__controls">
+                <button
+                  class="btn ico-prev small-video__control"
+                  type="button"
+                ></button>
+                <ul class="dots">
+                  <li class="dots__item active"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                  <li class="dots__item"></li>
+                </ul>
+                <button
+                  class="btn ico-next small-video__control"
+                  type="button"
+                ></button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -335,12 +506,12 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="logo footer__logo" id="footerLogo">
+        <div class="logo footer__logo">
           <a href="#louvre" class="logo__link">
             <span class="logo__img"></span>
           </a>
         </div>
-        <nav class="footer__navigation" id="footerNav">
+        <nav class="footer__navigation">
           <ul class="navigation navigation-footer">
             <li class="navigation__link navigation-footer__link">
               <a href="#visiting">Visiting</a>
@@ -362,7 +533,7 @@
             </li>
           </ul>
         </nav>
-        <div class="footer__social" id="footerSocial">
+        <div class="footer__social">
           <ul class="social">
             <li class="social__link">
               <a
@@ -406,19 +577,19 @@
             </li>
           </ul>
         </div>
-        <div class="footer__content" id="footerContent">
+        <div class="footer__content">
           <p>© 2021</p>
           <a
             href="https://rs.school/index.html"
             target="_blank"
             rel="noopener noreferrer"
-            ><p>The Rolling Scopes School</p></a
+            >The Rolling Scopes School</a
           >
           <a
             href="https://github.com/Liubomyr86"
             target="_blank"
             rel="noopener noreferrer"
-            ><p>Liubomyr86</p></a
+            >Liubomyr86</a
           >
         </div>
       </div>

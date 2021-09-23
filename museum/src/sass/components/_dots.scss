@@ -1,0 +1,35 @@
+.dots {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  /* Reset styles */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dots__item {
+  /* Rounded border */
+  border-radius: 9999px;
+  height: 12px;
+  width: 12px;
+
+  /* Active dot */
+  // background-color: var(--color-dot-active);
+
+  /* Inactive dot */
+  background-color: var(--color-dot);
+
+  /* OPTIONAL: Spacing between dots */
+  margin: 0 10px;
+  @extend %transition;
+  &:hover {
+    background-color: var(--color-main-btn);
+  }
+}
+.active {
+  background-color: var(--color-dot-active);
+}
