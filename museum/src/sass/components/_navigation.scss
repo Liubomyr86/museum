@@ -1,11 +1,11 @@
 .navigation {
   display: flex;
   align-items: center;
-  max-width: 720px;
+  max-width: 800px;
   margin: 0;
 
   &__link {
-    margin-left: 76px;
+    margin-left: 57px;
 
     &:first-child {
       margin-left: 0;
@@ -29,7 +29,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 620px;
+  max-width: 620px;
   max-height: 155px;
   &__link {
     margin: 0;

@@ -77,7 +77,6 @@
     padding: 0;
     margin: 0 10px;
     background-color: var(--color-dot);
-    -webkit-mask-image: url("../assets/svg/video-slider-controls/video-control.svg");
     -webkit-mask-size: cover;
     border: 0;
     @extend %transition;

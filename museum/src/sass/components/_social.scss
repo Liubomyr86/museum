@@ -10,4 +10,10 @@
     align-items: center;
     margin-bottom: 16px;
   }
+  &__ico {
+    border: 0;
+    background-color: var(--color-bg-light);
+    -webkit-mask-size: cover;
+    @extend %transition;
+  }
 }

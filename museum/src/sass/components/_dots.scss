@@ -29,7 +29,23 @@
   &:hover {
     background-color: var(--color-main-btn);
   }
+  &_welcome {
+    border-radius: 0;
+    height: 16px;
+    width: 16px;
+    margin: 0 25px 0 0;
+    background-color: var(--color-bg-light);
+    &:hover {
+      background-color: var(--color-hover);
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
 .active {
   background-color: var(--color-dot-active);
+  &_welcome {
+    background-color: var(--color-welcom-dot-active);
+  }
 }

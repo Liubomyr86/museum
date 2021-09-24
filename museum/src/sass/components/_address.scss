@@ -19,6 +19,10 @@
       margin-top: 25px;
       text-decoration: none;
       @include font($height: 26px, $style: normal);
+      @extend %transition;
+      &:hover {
+        color: var(--color-hover);
+      }
     }
   }
 }

@@ -41,18 +41,63 @@
     </header>
     <main class="main">
       <section class="welcome" id="welcome">
-        <div class="container">
-          <h2 class="welcome__title">
-            Welcome <br />
-            to the Louvre
-          </h2>
-          <p class="welcome__content">From the castle to the museum</p>
-          <a
-            class="btn btn_colored welcome__btn"
-            href="./tour1.html"
-            target="blank"
-            >Discover the Louvre</a
-          >
+        <div class="container welcome__container">
+          <div class="welcome__content">
+            <h2 class="welcome__title">
+              <span>Welcome</span>
+              to the Louvre
+            </h2>
+            <p class="welcome__text">From the castle to the museum</p>
+            <a
+              class="btn btn_colored welcome__btn"
+              href="./tour1.html"
+              target="blank"
+              >Discover the Louvre</a
+            >
+          </div>
+          <div class="welcome__slider">
+            <div class="welcome__slider-container">
+              <div class="welcome__slider-item">
+                <img src="./assets/img/welcome-slider/1.jpg" alt="picture" />
+              </div>
+              <div class="welcome__slider-item">
+                <img src="./assets/img/welcome-slider/2.jpg" alt="picture" />
+              </div>
+              <div class="welcome__slider-item">
+                <img src="./assets/img/welcome-slider/3.jpg" alt="picture" />
+              </div>
+              <div class="welcome__slider-item">
+                <img src="./assets/img/welcome-slider/4.jpg" alt="picture" />
+              </div>
+              <div class="welcome__slider-item">
+                <img src="./assets/img/welcome-slider/5.jpg" alt="picture" />
+              </div>
+            </div>
+            <div class="welcome__slider-controls">
+              <div class="counter">
+                <span class="counter__active">01</span>
+                <span>|</span>
+                <span>05</span>
+              </div>
+              <ul class="dots welcome__slider-dots">
+                <li class="dots__item dots__item_welcome active_welcome"></li>
+                <li class="dots__item dots__item_welcome"></li>
+                <li class="dots__item dots__item_welcome"></li>
+                <li class="dots__item dots__item_welcome"></li>
+                <li class="dots__item dots__item_welcome"></li>
+              </ul>
+              <div class="welcome__slider-buttons">
+                <button
+                  class="btn ico-welcome-prew welcome__slider-btn"
+                  type="button "
+                ></button>
+                <button
+                  class="btn ico-welcome-next welcome__slider-btn"
+                  type="button"
+                ></button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="visiting" id="visiting">
@@ -540,7 +585,7 @@
                 class="footer__ico"
                 href="https://www.youtube.com/user/louvre"
                 target="_blank"
-                ><span class="ico ico-youtube"></span
+                ><span class="ico ico-youtube social__ico"></span
               ></a>
             </li>
             <li class="social__link">
@@ -548,7 +593,7 @@
                 class="footer__ico"
                 href="https://www.instagram.com/museelouvre/"
                 target="_blank"
-                ><span class="ico ico-instagram"></span
+                ><span class="ico ico-instagram social__ico"></span
               ></a>
             </li>
             <li class="social__link">
@@ -556,7 +601,7 @@
                 class="footer__ico"
                 href="https://www.facebook.com/museedulouvre"
                 target="_blank"
-                ><span class="ico ico-facebook"></span
+                ><span class="ico ico-facebook social__ico"></span
               ></a>
             </li>
             <li class="social__link">
@@ -564,7 +609,7 @@
                 class="footer__ico"
                 href="https://twitter.com/museelouvre"
                 target="_blank"
-                ><span class="ico ico-twitter"></span
+                ><span class="ico ico-twitter social__ico"></span
               ></a>
             </li>
             <li class="social__link">
@@ -572,7 +617,7 @@
                 class="footer__ico"
                 href="https://www.pinterest.fr/museedulouvre"
                 target="_blank"
-                ><span class="ico ico-pinterest"></span
+                ><span class="ico ico-pinterest social__ico"></span
               ></a>
             </li>
           </ul>
