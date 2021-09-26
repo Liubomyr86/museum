@@ -31,6 +31,11 @@
     align-items: center;
     border-top: 1px solid #030303;
     border-bottom: 1px solid #030303;
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      appearance: none;
+    }
   }
 
   &__btn,

@@ -1,0 +1,20 @@
+.close-btn {
+  &__line {
+    position: absolute;
+    border: 1px solid #030303;
+
+    &_top {
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(24px) rotate(45deg);
+    }
+
+    &_bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}

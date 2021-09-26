@@ -1,6 +1,24 @@
 .form {
+  position: relative;
   padding: 91px 235px;
   background-color: var(--color-bg-light);
+  left: -200%;
+  top: 50%; /* 3 */
+  transform: translate(0, -50%);
+  transition: all 0.3s ease-out;
+  z-index: 11;
+
+  &.open {
+    left: 0;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    width: 36px;
+    height: 36px;
+  }
 
   &__container {
     display: flex;

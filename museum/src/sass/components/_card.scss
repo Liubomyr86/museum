@@ -69,11 +69,17 @@
       display: flex;
       gap: 15px;
     }
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      opacity: 1;
+    }
     input {
       margin-top: 5px;
+      padding: 0 10px;
       width: 100px;
       height: 35px;
       border: 0;
+      text-align: start;
     }
   }
 

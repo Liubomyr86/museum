@@ -639,8 +639,14 @@
         </div>
       </div>
     </footer>
-    <div class="overlay">
+    <div class="overlay hiden">
       <div class="container form">
+        <span class="btn form__close-btn">
+          <span class="close-btn">
+            <span class="close-btn__line close-btn__line_top"></span>
+            <span class="close-btn__line close-btn__line_bottom"></span>
+          </span>
+        </span>
         <form action="">
           <div class="form__container">
             <div class="form__left">
@@ -799,8 +805,14 @@
                             id="card_date"
                             min="01"
                             max="12"
+                            value="03"
                           />
-                          <input type="number" />
+                          <input
+                            type="number"
+                            min="2017"
+                            max="2031"
+                            value="2024"
+                          />
                         </div>
                       </label>
                     </div>
