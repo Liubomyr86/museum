@@ -4,15 +4,22 @@
   @extend %transition;
   text-decoration: none;
   cursor: pointer;
-  &_bordered {
-    color: var(--color-text-dark);
-  }
+  // &_bordered {
+  //   color: var(--color-text-dark);
+  // }
 
-  &_colored {
+  &_welcome {
     background-color: var(--color-main-btn);
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+  &_ticket {
+    background-color: var(--color-bg-dark);
 
     &:hover {
       background-color: var(--color-hover);
+      color: var(--color-text-dark);
     }
   }
 }

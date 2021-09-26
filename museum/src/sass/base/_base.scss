@@ -49,6 +49,10 @@ h3 {
   @include font($size: 32px, $height: 35px, $weight: 400);
 }
 
+h4 {
+  @extend %font-title;
+}
+
 .visuallyhidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -59,4 +63,8 @@ h3 {
   width: 1px;
   padding: 0;
   border: 0;
+}
+
+.overlay {
+  background-color: rgba(128, 128, 128, 0.8);
 }

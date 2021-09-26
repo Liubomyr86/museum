@@ -130,6 +130,8 @@
     @include font($height: 26px);
   }
   &__container {
+    display: flex;
+    align-items: center;
     margin: 15px 0 10px;
     border: 3px solid var(--color-text-dark);
   }
@@ -145,16 +147,13 @@
     @include font($size: 32px, $height: 37px, $weight: 400);
     text-align: center;
     @extend %transition;
-    &:hover {
-      color: var(--color-hover);
-      @extend %transition;
-    }
   }
+
   &__number {
-    margin-left: 16px;
+    width: 66px;
+    height: 44px;
     background-color: var(--color-bg-light);
-    border: 0 solid var(--color-bg-light);
-    width: 44px;
+    border: 0;
     text-align: center;
     @include font($height: 26px);
   }

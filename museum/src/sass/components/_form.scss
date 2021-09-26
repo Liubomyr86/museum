@@ -1,0 +1,101 @@
+.form {
+  padding: 91px 235px;
+  background-color: var(--color-bg-light);
+
+  &__container {
+    display: flex;
+    gap: 40px;
+    max-width: 970px;
+    color: var(--color-text-dark);
+  }
+  &__left,
+  &__rigth {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left {
+    max-width: 400px;
+  }
+
+  &__right {
+    padding: 25px 30px;
+    width: 530px;
+    border: 1px solid #030303;
+  }
+
+  &__title {
+    position: relative;
+    padding-top: 41px;
+    margin-bottom: 15px;
+    @include font($size: 50px, $height: 55px, $weight: 400);
+    color: var(--color-hover);
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 85px;
+      height: 41px;
+      background-image: url("../assets/svg/ticket-form/logo-form.svg");
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 71px;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+    color: var(--color-main-btn);
+    &::after {
+      @extend %underline-book-title;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    height: 45px;
+    border: 1px solid #030303;
+    &_date,
+    &_time {
+      width: 190px;
+    }
+  }
+
+  &__select {
+    margin-bottom: 20px;
+    height: 45px;
+    border: 1px solid #030303;
+  }
+
+  &__amount {
+    padding: 10px 15px 15px;
+    border: 1px solid #030303;
+  }
+
+  &__overview {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    margin-top: 10px;
+    height: 241px;
+  }
+
+  &__btn {
+    width: 220px;
+    height: 45px;
+    margin-top: 25px;
+    float: right;
+    color: var(--color-text-light);
+    opacity: 0.9;
+    @include font($height: 26px, $weight: 400);
+    border: 0;
+  }
+}

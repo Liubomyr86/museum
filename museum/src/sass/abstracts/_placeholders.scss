@@ -19,3 +19,13 @@
   height: 3px;
   background-color: var(--color-main-btn);
 }
+
+%underline-book-title {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-underline-book-title);
+}
