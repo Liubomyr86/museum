@@ -9,8 +9,6 @@
   z-index: 20;
 
   &.open {
-    // left: 0;
-
     left: calc(50vw - 720px);
   }
 
@@ -78,12 +76,111 @@
   }
 
   &__input {
+    padding-left: 42px;
     margin-bottom: 20px;
     height: 45px;
+    width: 100%;
     border: 1px solid #030303;
+    color: #030303;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+
+    &::placeholder {
+      color: #030303;
+    }
+
     &_date,
     &_time {
+      position: relative;
       width: 190px;
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("../assets/svg/ticket-form/input-arrow.svg");
+        width: 17px;
+        height: 17px;
+        padding-right: 14px;
+        margin: 0;
+      }
+
+      &::-webkit-datetime-edit {
+        color: var(--color-text-light);
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 14px;
+        left: 14px;
+      }
+
+      &:focus {
+        &::-webkit-datetime-edit {
+          color: #030303;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+        }
+      }
+    }
+
+    &_name,
+    &_email,
+    &_phone {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 15px;
+      }
+    }
+
+    &_date {
+      &::before {
+        width: 15px;
+        height: 15px;
+        background-image: url("../assets/svg/ticket-form/date.svg");
+      }
+      &::after {
+        position: absolute;
+        content: "Date";
+      }
+    }
+
+    &_time {
+      &::before {
+        width: 15px;
+        height: 15px;
+        background-image: url("../assets/svg/ticket-form/time.svg");
+      }
+
+      &::after {
+        position: absolute;
+        content: "Time";
+      }
+    }
+
+    &_name {
+      &::after {
+        width: 13px;
+        height: 15px;
+        background-image: url("../assets/svg/ticket-form/name.svg");
+      }
+    }
+    &_email {
+      &::after {
+        top: 17px;
+        width: 15px;
+        height: 11px;
+        background-image: url("../assets/svg/ticket-form/email.svg");
+      }
+    }
+    &_phone {
+      &::after {
+        top: 11px;
+        width: 14px;
+        height: 23px;
+        background-image: url("../assets/svg/ticket-form/tel.svg");
+      }
     }
   }
 
@@ -91,6 +188,13 @@
     margin-bottom: 20px;
     height: 45px;
     border: 1px solid #030303;
+    color: #fff;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../assets/svg/ticket-form/input-arrow.svg") 96%/4.2%
+      no-repeat;
   }
 
   &__amount {
@@ -135,5 +239,30 @@
       transform: translate(-50%, -50%) scale(3);
       opacity: 0;
     }
+  }
+}
+
+.select {
+  display: grid;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  color: #030303;
+  @include font($size: 18px, $height: 21px, $weight: 400);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: 15px;
+    background-image: url("../assets/svg/ticket-form/ballot.svg");
+  }
+
+  &::after {
+    position: absolute;
+    content: "Ticket Type";
+    left: 44px;
+    top: 13px;
   }
 }

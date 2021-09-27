@@ -658,32 +658,41 @@
                 id="time"
               />
             </div>
-            <input
-              class="form__input"
-              type="text"
-              name="text"
-              id="text"
-              placeholder="Name"
-            />
-            <input
-              class="form__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="E-mail "
-            />
-            <input
-              class="form__input"
-              type="tel"
-              name="tel"
-              id="tel"
-              placeholder="Phone"
-            />
-            <select class="form__select" name="ticket-tipe" id="ticket-type">
-              <option value="">Permanent exhibition</option>
-              <option value="">Temporary exhibition</option>
-              <option value="">Combined Admission</option>
-            </select>
+            <span class="form__input_name">
+              <input
+                class="form__input"
+                type="text"
+                name="text"
+                id="text"
+                placeholder="Name"
+              />
+            </span>
+            <span class="form__input_email">
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail "
+              />
+            </span>
+            <span class="form__input_phone">
+              <input
+                class="form__input"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Phone"
+              />
+            </span>
+            <span class="select">
+              <select class="form__select" name="ticket-tipe" id="ticket-type">
+                <option value="">Ticket Type</option>
+                <option value="">Permanent exhibition</option>
+                <option value="">Temporary exhibition</option>
+                <option value="">Combined Admission</option>
+              </select>
+            </span>
             <div class="form__amount amount">
               <h4 class="amount__title">Entry ticket</h4>
               <div class="amount__container">
@@ -796,6 +805,7 @@
                           max="12"
                           value="03"
                         />
+                        <!-- <span class="card__arrow"></span> -->
                       </label>
                       <label for="card_year">
                         <input
@@ -805,6 +815,7 @@
                           max="2031"
                           value="2024"
                         />
+                        <!-- <span class="card__arrow"></span> -->
                       </label>
                     </span>
                   </div>
@@ -821,7 +832,6 @@
                 </div>
               </div>
               <div class="card__back">
-                <!-- <div class="card__line"></div> -->
                 <div class="card__cvv">
                   <label for="card_cvv">
                     CVC/CVV

@@ -56,7 +56,7 @@
       margin-top: 5px;
       width: 215px;
       height: 35px;
-      border: 0;
+      border: 0.5px solid var(--color-card-input-border);
     }
   }
 
@@ -70,20 +70,53 @@
       align-items: flex-end;
       gap: 15px;
     }
-    input::-webkit-inner-spin-button,
-    input::-webkit-outer-spin-button {
-      opacity: 1;
+    input::-webkit-inner-spin-button {
+      // input::-webkit-outer-spin-button {
+      // opacity: 1;
+      -webkit-appearance: none;
+      width: 28px;
+      background: url(../assets/Frame.svg) no-repeat center center;
+      border-left: 0.5px solid var(--color-card-input-border);
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
     }
+
     input {
       margin-top: 5px;
       padding: 0 10px;
       width: 100px;
       height: 35px;
-      border: 0;
+      border: 0.5px solid var(--color-card-input-border);
       text-align: start;
       // @include font($size: 12px, $height: 14px, $weight: 400);
     }
   }
+
+  // &__arrow {
+  //   position: relative;
+  //   &::before,
+  //   &::after {
+  //     position: absolute;
+  //     content: "";
+  //     width: 6px;
+  //     height: 4px;
+
+  //     left: -17px;
+  //   }
+
+  //   &::before {
+  //     top: 2px;
+  //     background-image: url("../assets/arrow.svg");
+  //   }
+  //   &::after {
+  //     bottom: 2px;
+  //     transform: rotate(180deg);
+  //     background-image: url("../assets/arrow.svg");
+  //   }
+  // }
 
   &__name {
     grid-column-end: span 2;
@@ -93,7 +126,7 @@
       margin-top: 5px;
       width: 320px;
       height: 35px;
-      border: 0;
+      border: 0.5px solid var(--color-card-input-border);
     }
   }
 
