@@ -1,5 +1,3 @@
-// export default createGallery
-
 const gallerInnerPictures = document.querySelector('.gallery__inner-pictures')
 
 const imgPath = [
