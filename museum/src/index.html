@@ -89,11 +89,9 @@
               <div class="welcome__slider-buttons">
                 <button
                   class="btn ico-welcome-prew welcome__slider-btn"
-                  type="button "
                 ></button>
                 <button
                   class="btn ico-welcome-next welcome__slider-btn"
-                  type="button"
                 ></button>
               </div>
             </div>
@@ -106,7 +104,7 @@
           <div class="visiting__cards-container">
             <a class="visiting-card" href="./tour2.html" target="blank">
               <img
-                src="./assets/img/visiting/Royal Palace.jpg"
+                src="./assets/img/visiting/RoyalPalace.jpg"
                 alt="Royal Palace"
                 class="visiting-card__img"
                 width="440"
@@ -118,7 +116,7 @@
             </a>
             <a class="visiting-card" href="./tour3.html" target="blank ">
               <img
-                src="./assets/img/visiting/Denon Wing.jpg"
+                src="./assets/img/visiting/DenonWing.jpg"
                 alt="Denon Wing"
                 class="visiting-card__img"
                 width="440"
@@ -130,7 +128,7 @@
             </a>
             <a class="visiting-card" href="./tour4.html" target="blank">
               <img
-                src="./assets/img/visiting/Colonnade Perrault.jpg"
+                src="./assets/img/visiting/ColonnadePerrault.jpg"
                 alt="Colonnade Perrault"
                 class="visiting-card__img"
                 width="440"
@@ -142,7 +140,7 @@
             </a>
             <a class="visiting-card" href="./tour5.html" target="blank">
               <img
-                src="./assets/img/visiting/Greek hall.jpg"
+                src="./assets/img/visiting/Greekhall.jpg"
                 alt="Greek hall"
                 class="visiting-card__img"
                 width="440"
@@ -154,7 +152,7 @@
             </a>
             <a class="visiting-card" href="./tour6.html" target="blank">
               <img
-                src="./assets/img/visiting/Mona Lisa.jpg"
+                src="./assets/img/visiting/MonaLisa.jpg"
                 alt="Mona Lisa"
                 class="visiting-card__img"
                 width="440"
@@ -166,7 +164,7 @@
             </a>
             <a class="visiting-card" href="./tour7.html" target="blank">
               <img
-                src="./assets/img/visiting/Night Palace.jpg"
+                src="./assets/img/visiting/NightPalace.jpg"
                 alt="Night Palace"
                 class="visiting-card__img"
                 width="440"
@@ -312,7 +310,6 @@
                       <img src='./assets/img/video-slider/poster0.png' alt='Demo video'>
                       </a>"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -332,7 +329,6 @@
                       <img src='./assets/img/video-slider/poster1.png' alt='Demo video'>
                       </a>"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -352,7 +348,6 @@
                       <img src='./assets/img/video-slider/poster2.png' alt='Demo video'>
                       </a>"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -372,7 +367,6 @@
                       <img src='./assets/img/video-slider/poster3.png' alt='Demo video'>
                       </a>"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -392,7 +386,6 @@
                       <img src='./assets/img/video-slider/poster4.png' alt='Demo video'>
                       </a>"
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                   ></iframe>
@@ -645,7 +638,7 @@
             <span class="close-btn__line close-btn__line_bottom"></span>
           </span>
         </span>
-        <form action="">
+        <form action="#">
           <div class="form__container">
             <div class="form__left">
               <h4 class="form__title">Booking tickets</h4>
@@ -656,14 +649,12 @@
                   type="date"
                   name="date"
                   id="date"
-                  placeholder="Date"
                 />
                 <input
                   class="form__input form__input_time"
                   type="time"
                   name="time"
                   id="time"
-                  placeholder="Time"
                 />
               </div>
               <input
@@ -795,9 +786,9 @@
                       /></label>
                     </div>
                     <div class="card__date">
-                      <label for="card_date"
-                        >Expiration date
-                        <div class="card__date_inputs">
+                      <span class="card__date_inputs">
+                        <label for="card_date"
+                          >Expiration date
                           <input
                             type="number"
                             id="card_date"
@@ -805,14 +796,17 @@
                             max="12"
                             value="03"
                           />
+                        </label>
+                        <label for="card_year">
                           <input
                             type="number"
+                            id="card_year"
                             min="2017"
                             max="2031"
                             value="2024"
                           />
-                        </div>
-                      </label>
+                        </label>
+                      </span>
                     </div>
                   </div>
                   <div class="card__right">

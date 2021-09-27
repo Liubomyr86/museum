@@ -67,6 +67,7 @@
 
     &_inputs {
       display: flex;
+      align-items: flex-end;
       gap: 15px;
     }
     input::-webkit-inner-spin-button,
@@ -80,6 +81,7 @@
       height: 35px;
       border: 0;
       text-align: start;
+      // @include font($size: 12px, $height: 14px, $weight: 400);
     }
   }
 
