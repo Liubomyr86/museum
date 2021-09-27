@@ -632,217 +632,216 @@
         </div>
       </div>
     </footer>
-    <div class="overlay hiden">
-      <div class="container form">
-        <span class="btn form__close-btn">
-          <span class="close-btn">
-            <span class="close-btn__line close-btn__line_top"></span>
-            <span class="close-btn__line close-btn__line_bottom"></span>
-          </span>
+    <div class="container form">
+      <span class="btn form__close-btn">
+        <span class="close-btn">
+          <span class="close-btn__line close-btn__line_top"></span>
+          <span class="close-btn__line close-btn__line_bottom"></span>
         </span>
-        <form action="#">
-          <div class="form__container">
-            <div class="form__left">
-              <h4 class="form__title">Booking tickets</h4>
-              <p class="form__text">Tour to Louvre</p>
-              <div class="form__inputs">
-                <input
-                  class="form__input form__input_date"
-                  type="date"
-                  name="date"
-                  id="date"
-                />
-                <input
-                  class="form__input form__input_time"
-                  type="time"
-                  name="time"
-                  id="time"
-                />
-              </div>
+      </span>
+      <form action="#">
+        <div class="form__container">
+          <div class="form__left">
+            <h4 class="form__title">Booking tickets</h4>
+            <p class="form__text">Tour to Louvre</p>
+            <div class="form__inputs">
               <input
-                class="form__input"
-                type="text"
-                name="text"
-                id="text"
-                placeholder="Name"
+                class="form__input form__input_date"
+                type="date"
+                name="date"
+                id="date"
               />
               <input
-                class="form__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail "
+                class="form__input form__input_time"
+                type="time"
+                name="time"
+                id="time"
               />
-              <input
-                class="form__input"
-                type="tel"
-                name="tel"
-                id="tel"
-                placeholder="Phone"
-              />
-              <select class="form__select" name="ticket-tipe" id="ticket-type">
-                <option value="">Permanent exhibition</option>
-                <option value="">Temporary exhibition</option>
-                <option value="">Combined Admission</option>
-              </select>
-              <div class="form__amount amount">
-                <h4 class="amount__title">Entry ticket</h4>
-                <div class="amount__container">
-                  <p class="amount__subtitle">Basic 18+ (20 €)</p>
-                  <div class="amount__controls">
-                    <button
-                      class="btn amount__btn"
-                      onclick="this.nextElementSibling.stepDown()"
-                    >
-                      –
-                    </button>
-                    <input
-                      class="amount__input"
-                      type="number"
-                      min="0"
-                      max="20"
-                      value="2"
-                      readonly
-                      id="basic-amount"
-                    />
-                    <button
-                      class="btn amount__btn"
-                      onclick="this.previousElementSibling.stepUp()"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-                <div class="amount__container">
-                  <p class="amount__subtitle">Senior 65+ (10 €)</p>
-                  <div class="amount__controls">
-                    <button
-                      class="btn amount__btn"
-                      onclick="this.nextElementSibling.stepDown()"
-                    >
-                      –
-                    </button>
-                    <input
-                      class="amount__input"
-                      type="number"
-                      min="0"
-                      max="20"
-                      value="2"
-                      readonly
-                      id="senior-amount"
-                    />
-                    <button
-                      class="btn amount__btn"
-                      onclick="this.previousElementSibling.stepUp()"
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="form__right">
-              <div class="form__overview overview">
-                <div class="overview__content">
-                  <p class="overview__title">Overview</p>
-                  <p class="overview__subtitle">Tour to Louvre</p>
-                  <p class="overview__text">
-                    <span class="ico ico-date overview__ico"></span>Friday,
-                    August 19
-                  </p>
-                  <p class="overview__text">
-                    <span class="ico ico-time overview__ico"></span>16 : 30
-                  </p>
-                  <p class="overview__text">
-                    <span class="ico ico-check overview__ico"></span>Temporary
-                    exhibition
-                  </p>
-                </div>
-                <div class="overview__img">
-                  <img
-                    src="./assets/img/tickets/tickets-form-img.jpg"
-                    alt="picture"
+            <input
+              class="form__input"
+              type="text"
+              name="text"
+              id="text"
+              placeholder="Name"
+            />
+            <input
+              class="form__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail "
+            />
+            <input
+              class="form__input"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="Phone"
+            />
+            <select class="form__select" name="ticket-tipe" id="ticket-type">
+              <option value="">Permanent exhibition</option>
+              <option value="">Temporary exhibition</option>
+              <option value="">Combined Admission</option>
+            </select>
+            <div class="form__amount amount">
+              <h4 class="amount__title">Entry ticket</h4>
+              <div class="amount__container">
+                <p class="amount__subtitle">Basic 18+ (20 €)</p>
+                <div class="amount__controls">
+                  <button
+                    class="btn amount__btn"
+                    onclick="this.nextElementSibling.stepDown()"
+                  >
+                    –
+                  </button>
+                  <input
+                    class="amount__input"
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="2"
+                    readonly
+                    id="basic-amount"
                   />
+                  <button
+                    class="btn amount__btn"
+                    onclick="this.previousElementSibling.stepUp()"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
-              <div class="overview__amount">
-                <span
-                  ><output class="overview__output">2</output>Basic (20 €)</span
-                ><span>40 €</span>
-              </div>
-              <div class="overview__amount">
-                <span
-                  ><output class="overview__output">2</output>Senior (10
-                  €)</span
-                ><span>20 €</span>
-              </div>
-              <div class="overview__total">
-                <span>Total:</span><span>60 €</span>
-              </div>
-              <div class="form__card card">
-                <div class="card__front">
-                  <div class="card__left">
-                    <div class="card__number">
-                      <label for="card_number"
-                        >Card number <input type="text" id="card_number"
-                      /></label>
-                    </div>
-                    <div class="card__date">
-                      <span class="card__date_inputs">
-                        <label for="card_date"
-                          >Expiration date
-                          <input
-                            type="number"
-                            id="card_date"
-                            min="01"
-                            max="12"
-                            value="03"
-                          />
-                        </label>
-                        <label for="card_year">
-                          <input
-                            type="number"
-                            id="card_year"
-                            min="2017"
-                            max="2031"
-                            value="2024"
-                          />
-                        </label>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="card__right">
-                    <span class="ico ico-visa card__visa"></span>
-                    <span class="ico ico-mc"></span>
-                  </div>
-                  <div class="card__name">
-                    <label for="card_name"
-                      >Cardholder name
-                      <input type="text" id="card_name" />
-                    </label>
-                  </div>
-                </div>
-                <div class="card__back">
-                  <!-- <div class="card__line"></div> -->
-                  <div class="card__cvv">
-                    <label for="card_cvv">
-                      CVC/CVV
-                      <input type="text" id="card_cvv" />
-                    </label>
-                    <div class="card__text">
-                      <p>
-                        <span>The last </span>3 or 4 digits
-                        <span>on back </span>of the card
-                      </p>
-                    </div>
-                  </div>
+              <div class="amount__container">
+                <p class="amount__subtitle">Senior 65+ (10 €)</p>
+                <div class="amount__controls">
+                  <button
+                    class="btn amount__btn"
+                    onclick="this.nextElementSibling.stepDown()"
+                  >
+                    –
+                  </button>
+                  <input
+                    class="amount__input"
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="2"
+                    readonly
+                    id="senior-amount"
+                  />
+                  <button
+                    class="btn amount__btn"
+                    onclick="this.previousElementSibling.stepUp()"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
-              <button class="btn btn_welcome form__btn">Book</button>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="form__right">
+            <div class="form__overview overview">
+              <div class="overview__content">
+                <p class="overview__title">Overview</p>
+                <p class="overview__subtitle">Tour to Louvre</p>
+                <p class="overview__text">
+                  <span class="ico ico-date overview__ico"></span>Friday, August
+                  19
+                </p>
+                <p class="overview__text">
+                  <span class="ico ico-time overview__ico"></span>16 : 30
+                </p>
+                <p class="overview__text">
+                  <span class="ico ico-check overview__ico"></span>Temporary
+                  exhibition
+                </p>
+              </div>
+              <div class="overview__img">
+                <img
+                  src="./assets/img/tickets/tickets-form-img.jpg"
+                  alt="picture"
+                />
+              </div>
+            </div>
+            <div class="overview__amount">
+              <span
+                ><output class="overview__output">2</output>Basic (20 €)</span
+              ><span>40 €</span>
+            </div>
+            <div class="overview__amount">
+              <span
+                ><output class="overview__output">2</output>Senior (10 €)</span
+              ><span>20 €</span>
+            </div>
+            <div class="overview__total">
+              <span>Total:</span><span>60 €</span>
+            </div>
+            <div class="form__card card">
+              <div class="card__front">
+                <div class="card__left">
+                  <div class="card__number">
+                    <label for="card_number"
+                      >Card number <input type="text" id="card_number"
+                    /></label>
+                  </div>
+                  <div class="card__date">
+                    <span class="card__date_inputs">
+                      <label for="card_date"
+                        >Expiration date
+                        <input
+                          type="number"
+                          id="card_date"
+                          min="01"
+                          max="12"
+                          value="03"
+                        />
+                      </label>
+                      <label for="card_year">
+                        <input
+                          type="number"
+                          id="card_year"
+                          min="2017"
+                          max="2031"
+                          value="2024"
+                        />
+                      </label>
+                    </span>
+                  </div>
+                </div>
+                <div class="card__right">
+                  <span class="ico ico-visa card__visa"></span>
+                  <span class="ico ico-mc"></span>
+                </div>
+                <div class="card__name">
+                  <label for="card_name"
+                    >Cardholder name
+                    <input type="text" id="card_name" />
+                  </label>
+                </div>
+              </div>
+              <div class="card__back">
+                <!-- <div class="card__line"></div> -->
+                <div class="card__cvv">
+                  <label for="card_cvv">
+                    CVC/CVV
+                    <input type="text" id="card_cvv" />
+                  </label>
+                  <div class="card__text">
+                    <p>
+                      <span>The last </span>3 or 4 digits
+                      <span>on back </span>of the card
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn_welcome form__btn">Book</button>
+          </div>
+        </div>
+      </form>
     </div>
+
+    <div class="overlay hiden"></div>
   </body>
 </html>

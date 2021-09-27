@@ -16,10 +16,10 @@
       color: var(--color-text-light);
       text-decoration: none;
       letter-spacing: 2px;
+      @extend %transition;
 
       &:hover {
         color: var(--color-hover);
-        @extend %transition;
       }
     }
   }

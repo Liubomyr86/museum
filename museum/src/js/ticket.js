@@ -17,6 +17,12 @@ export function clickBtn() {
     ticketForm.classList.remove('open');
     overlayElem.classList.remove('open');
   })
+
+  overlayElem.addEventListener('click', () => {
+    overlayElem.classList.add('hiden');
+    ticketForm.classList.remove('open');
+    overlayElem.classList.remove('open');
+  })
 }
 
 export function rippleEffect() {

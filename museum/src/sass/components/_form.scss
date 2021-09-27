@@ -1,15 +1,17 @@
 .form {
-  position: relative;
+  position: fixed;
   padding: 91px 235px;
   background-color: var(--color-bg-light);
   left: -200%;
-  top: 50%; /* 3 */
-  transform: translate(0, -50%);
+  top: calc(50vh - 422.5px);
+
   transition: all 0.3s ease-out;
-  z-index: 11;
+  z-index: 20;
 
   &.open {
-    left: 0;
+    // left: 0;
+
+    left: calc(50vw - 720px);
   }
 
   &__close-btn {
