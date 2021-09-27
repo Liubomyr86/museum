@@ -72,10 +72,6 @@
     right: 0;
     width: 600px;
     height: 120px;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // align-items: center;
-    // justify-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +91,7 @@
   &__slider-btn {
     border: 0;
     background-color: var(--color-bg-light);
-    -webkit-mask-size: cover;
+    mask-size: cover;
     @extend %transition;
     &:hover {
       background-color: var(--color-hover);

@@ -152,6 +152,10 @@
     @include font($size: 32px, $height: 37px, $weight: 400);
     text-align: center;
     @extend %transition;
+
+    &:hover {
+      color: var(--color-hover);
+    }
   }
 
   &__number {
