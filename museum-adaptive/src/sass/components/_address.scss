@@ -1,0 +1,28 @@
+.address {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    p,
+    a {
+      color: var(--color-bg-dark);
+    }
+
+    p {
+      @include font($size: 28px, $height: 33px, $style: normal, $weight: 500);
+      &:last-of-type {
+        margin-top: 51px;
+        @include font($size: 22px, $height: 26px, $style: normal, $weight: 300);
+      }
+    }
+
+    a {
+      margin-top: 25px;
+      text-decoration: none;
+      @include font($height: 26px, $style: normal);
+      @extend %transition;
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
+  }
+}

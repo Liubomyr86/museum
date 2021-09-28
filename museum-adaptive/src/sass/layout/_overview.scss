@@ -1,0 +1,67 @@
+.overview {
+  &__content {
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: #272727;
+    @include font($size: 32px, $height: 37px, $weight: 500);
+  }
+
+  &__subtitle {
+    margin-bottom: 13px;
+    color: #740c11;
+    @include font($height: 22px, $weight: 500);
+  }
+
+  &__text {
+    margin-bottom: 5px;
+    color: #030303;
+    @include font($size: 18px, $height: 21px);
+  }
+
+  &__ico {
+    margin-right: 15px;
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+    span {
+      color: #030303;
+      @include font($height: 26px, $weight: 400);
+    }
+  }
+
+  &__output {
+    padding: 0 11px;
+    margin-right: 10px;
+    width: 32px;
+    height: 20px;
+    border-radius: 5px;
+    color: #a4a4a3;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+    background-color: #030303;
+  }
+
+  &__total {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 23px;
+    &::before {
+      @extend %underline-book-title;
+      top: -15px;
+    }
+
+    span {
+      color: #030303;
+      @include font($size: 32px, $height: 37px, $weight: 500);
+    }
+  }
+}

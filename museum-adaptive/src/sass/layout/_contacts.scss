@@ -1,0 +1,19 @@
+.contacts {
+  &__title {
+    position: relative;
+    margin-top: 75px;
+    color: var(--color-hover);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      @extend %underline-title;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 202px;
+    margin: 103px 0 61px;
+  }
+}

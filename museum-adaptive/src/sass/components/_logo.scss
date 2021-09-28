@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    &:hover {
+      .logo__img {
+        background-color: var(--color-hover);
+        color: var(--color-hover);
+      }
+      .logo__text {
+        color: var(--color-hover);
+      }
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    width: 49px;
+    height: 26px;
+    background-color: var(--color-bg-light);
+    -webkit-mask-image: url("../assets/svg/logo.svg");
+    mask-size: cover;
+    @extend %transition;
+
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+
+  &__text {
+    margin-left: 20px;
+    @extend %font-title;
+    @include font($size: 28px, $height: 31px, $weight: 400);
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    @extend %transition;
+  }
+}

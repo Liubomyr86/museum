@@ -1,0 +1,61 @@
+.visiting__title {
+  position: relative;
+  margin-top: 75px;
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  &::after {
+    @extend %underline-title;
+  }
+}
+
+.visiting__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 76px 60px;
+  margin: 103px 0 75px;
+}
+
+.visiting-card {
+  text-decoration: none;
+  color: var(--color-text-dark);
+  @extend %transition;
+
+  &__title {
+    position: relative;
+    margin-top: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 300px;
+      height: 2px;
+      background-color: var(--color-main-btn);
+      @extend %transition;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 21px;
+    @include font($weight: 200, $height: 26px);
+  }
+
+  &__content {
+    margin-top: 10px;
+    @include font($size: 18px, $weight: 200, $height: 21px);
+  }
+
+  &:hover {
+    transform: scale(1.06);
+    @extend %transition;
+
+    .visiting-card__title::after {
+      width: 100%;
+    }
+  }
+}

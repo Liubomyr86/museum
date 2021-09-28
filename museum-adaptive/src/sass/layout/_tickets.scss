@@ -1,0 +1,169 @@
+.tickets {
+  // background-color: var(--color-bg-dark);
+
+  &__container {
+    padding: 75px 0;
+  }
+
+  &__title {
+    position: relative;
+    color: var(--color-hover);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      @extend %underline-title;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 60px;
+    margin-top: 103px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 239px;
+    color: var(--color-text-dark);
+  }
+
+  &__type {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    @include font($size: 28px, $height: 33px, $weight: 700);
+    margin-bottom: 25px;
+
+    &_end {
+      padding-left: 50px;
+    }
+  }
+  &__amount-container {
+    padding-left: 25px;
+  }
+  &__btn {
+    width: 174px;
+    height: 50px;
+    border-radius: 2px;
+    border: 0 solid var(--color-bg-dark);
+    color: var(--color-bg-light);
+    letter-spacing: 2px;
+  }
+}
+
+.ticket-type__container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 25px;
+  line-height: 26px;
+  cursor: pointer;
+  @extend %transition;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:hover {
+    color: var(--color-hover);
+    @extend %transition;
+  }
+
+  /* Hide the browser's default radio button */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    /* When the radio button is checked, add a dark background */
+    &:checked ~ .checkmark {
+      background-color: var(--color-bg-light);
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .checkmark {
+    background-color: var(--color-hover);
+    @extend %transition;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-text-dark);
+  }
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-dark);
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.ticket-amount {
+  &__text {
+    @include font($height: 26px);
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0 10px;
+    border: 3px solid var(--color-text-dark);
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      appearance: none;
+    }
+  }
+  &__total {
+    margin: 50px 0 60px;
+    @include font($size: 28px, $height: 33px, $weight: 700);
+    letter-spacing: 1.6px;
+  }
+  &__btn {
+    padding: 3px 8px;
+    background-color: var(--color-bg-light);
+    border: 0 solid var(--color-bg-dark);
+    @include font($size: 32px, $height: 37px, $weight: 400);
+    text-align: center;
+    @extend %transition;
+
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+
+  &__number {
+    width: 66px;
+    height: 44px;
+    background-color: var(--color-bg-light);
+    border: 0;
+    text-align: center;
+    @include font($height: 26px);
+  }
+}

@@ -1,0 +1,9 @@
+.header {
+  background-color: var(--color-bg-dark);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 59px 0 47px;
+  }
+}
