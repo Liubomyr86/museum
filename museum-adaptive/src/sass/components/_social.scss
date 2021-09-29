@@ -9,6 +9,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    @include media-tablet {
+      margin-bottom: 12px;
+    }
   }
   &__ico {
     border: 0;

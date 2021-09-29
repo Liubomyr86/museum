@@ -3,18 +3,33 @@
   display: flex;
   flex-direction: column;
   margin: 75px 0 40px;
+  @include media-tablet {
+    margin: 40px 0 20px;
+  }
 }
 
 .main-video {
   &__container {
     display: flex;
     overflow: hidden;
-    height: 650px;
+  }
+
+  &__item {
+    position: relative;
+    flex-shrink: 0;
+    padding-bottom: 45.14%;
+    height: 0;
+    width: 100%;
+
+    overflow: hidden;
   }
 
   &__video {
-    min-width: 1440px;
-    height: 650px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -25,6 +40,9 @@
     padding-left: 5px;
     min-height: 85px;
     background-color: var(--color-text-dark);
+    @include media-tablet {
+      min-height: 60px;
+    }
   }
 
   &__play {
@@ -57,13 +75,28 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    height: 254px;
+
     margin-top: 40px;
     overflow: hidden;
   }
 
   &__item {
     margin-right: 42px;
+
+    position: relative;
+    flex-shrink: 0;
+    padding-bottom: 17.6%;
+    height: 0;
+    width: calc(100% / 3 - 28px);
+
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__controls {

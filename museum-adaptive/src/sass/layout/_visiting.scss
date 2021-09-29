@@ -8,13 +8,31 @@
   &::after {
     @extend %underline-title;
   }
+
+  @include media-tablet {
+    margin-top: 60px;
+  }
 }
 
 .visiting__cards-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 76px 60px;
   margin: 103px 0 75px;
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 62px 108px;
+    margin: 85px 0 62px;
+
+    & a:nth-of-type(2n + 1) {
+      justify-self: end;
+    }
+
+    & a:nth-of-type(2n) {
+      justify-self: start;
+    }
+  }
 }
 
 .visiting-card {
@@ -22,11 +40,29 @@
   color: var(--color-text-dark);
   @extend %transition;
 
+  &__img-container {
+    width: 100%;
+    aspect-ratio: 3/ 2;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+      @include media-tablet {
+        max-width: 330px;
+        max-height: 215px;
+      }
+    }
+  }
+
   &__title {
     position: relative;
     margin-top: 14px;
     letter-spacing: 5px;
     text-transform: uppercase;
+    @include media-tablet {
+      margin-top: 13px;
+      letter-spacing: 3px;
+    }
 
     &::after {
       content: "";
@@ -37,17 +73,28 @@
       height: 2px;
       background-color: var(--color-main-btn);
       @extend %transition;
+
+      @include media-tablet {
+        width: 150px;
+        bottom: -12px;
+      }
     }
   }
 
   &__subtitle {
     margin-top: 21px;
     @include font($weight: 200, $height: 26px);
+    @include media-tablet {
+      @include font($size: 20px, $weight: 200, $height: 23px);
+    }
   }
 
   &__content {
     margin-top: 10px;
     @include font($size: 18px, $weight: 200, $height: 21px);
+    @include media-tablet {
+      @include font($size: 16px, $weight: 200, $height: 19px);
+    }
   }
 
   &:hover {

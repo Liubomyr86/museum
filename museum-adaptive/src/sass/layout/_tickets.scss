@@ -1,8 +1,14 @@
 .tickets {
-  // background-color: var(--color-bg-dark);
-
   &__container {
     padding: 75px 0;
+
+    @include media-desctop {
+      padding: 75px 35px;
+    }
+
+    @include media-tablet {
+      padding: 59px 20px 60px;
+    }
   }
 
   &__title {
@@ -20,10 +26,29 @@
     display: flex;
     gap: 60px;
     margin-top: 103px;
+
+    @include media-tablet {
+      gap: 80px;
+      margin-top: 85px;
+    }
+  }
+
+  &__img {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @include media-tablet {
+      overflow: hidden;
+      max-height: 440px;
+      max-width: 700px;
+      width: 100%;
+    }
   }
 
   &__controls {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 239px;
     color: var(--color-text-dark);
@@ -32,6 +57,10 @@
   &__type {
     display: flex;
     flex-direction: column;
+
+    @include media-tablet {
+      display: none;
+    }
   }
 
   &__subtitle {
@@ -40,10 +69,19 @@
 
     &_end {
       padding-left: 50px;
+
+      @include media-tablet {
+        padding-left: 0;
+        margin-bottom: 29px;
+      }
     }
   }
   &__amount-container {
     padding-left: 25px;
+
+    @include media-tablet {
+      padding-left: 0;
+    }
   }
   &__btn {
     width: 174px;
@@ -139,11 +177,26 @@
     input::-webkit-outer-spin-button {
       appearance: none;
     }
+
+    @include media-tablet {
+      margin: 10px 0 29px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
   &__total {
     margin: 50px 0 60px;
     @include font($size: 28px, $height: 33px, $weight: 700);
     letter-spacing: 1.6px;
+
+    @include media-tablet {
+      margin: 25px 0 69px;
+      letter-spacing: 2px;
+      span {
+        padding-left: 14px;
+      }
+    }
   }
   &__btn {
     padding: 3px 8px;
@@ -156,6 +209,10 @@
     &:hover {
       color: var(--color-hover);
     }
+
+    @include media-tablet {
+      padding: 3px 12px;
+    }
   }
 
   &__number {
@@ -165,5 +222,9 @@
     border: 0;
     text-align: center;
     @include font($height: 26px);
+
+    @include media-tablet {
+      width: 80px;
+    }
   }
 }

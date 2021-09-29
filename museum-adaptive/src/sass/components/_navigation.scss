@@ -22,6 +22,49 @@
         color: var(--color-hover);
       }
     }
+
+    @include media-tablet {
+      position: relative;
+      margin-left: 0;
+      padding-bottom: 10px;
+      a {
+        @include font($size: 20px, $height: 23px, $weight: 300);
+        letter-spacing: 2px;
+      }
+      &_header {
+        &::after {
+          position: absolute;
+          content: "";
+          top: 15px;
+          left: 110px;
+          width: 12px;
+          height: 12px;
+          background-color: var(--color-bg-light);
+          -webkit-mask-image: url("../assets/svg/hamburger-menu/arrow.svg");
+          -webkit-mask-size: cover;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+.navigation-header {
+  @include media-tablet {
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 54px;
+    left: -100%;
+    top: 165px;
+    width: 100%;
+    max-width: 180px;
+    z-index: 100;
+    background-color: var(--color-bg-dark);
+    transition: all 0.3s ease-out;
+    &.open {
+      left: 0;
+    }
   }
 }
 
@@ -36,6 +79,11 @@
     padding-bottom: 1px;
     &:nth-child(n + 4) {
       padding-right: 88px;
+
+      @include media-tablet {
+        padding-right: 0;
+        padding-left: 25px;
+      }
     }
   }
 }

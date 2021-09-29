@@ -18,6 +18,11 @@
     right: 25px;
     width: 36px;
     height: 36px;
+
+    @include media-tablet {
+      top: 33px;
+      right: 230px;
+    }
   }
 
   &__container {

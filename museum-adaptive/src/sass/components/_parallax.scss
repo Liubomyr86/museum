@@ -1,6 +1,7 @@
 .parallax {
-  background-image: url("../assets/img/parallax.jpg");
+  background: url("../assets/img/parallax.jpg");
   min-height: 400px;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

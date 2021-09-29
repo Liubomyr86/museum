@@ -3,10 +3,26 @@
 
   &__container {
     display: flex;
-    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    // gap: 60px;
     padding: 75px 0;
+    @include media-desctop {
+      padding: 75px 35px;
+    }
+    @include media-tablet {
+      padding: 60px 20px 49px;
+    }
   }
 
+  &__content {
+    max-width: 660px;
+    width: 100%;
+    @include media-tablet {
+      max-width: 100%;
+    }
+  }
   &__title {
     position: relative;
     letter-spacing: 5px;
@@ -17,11 +33,31 @@
     }
   }
 
-  &__content {
+  &__text {
     margin-top: 25px;
+
+    @include media-tablet {
+      margin-top: 0;
+    }
 
     &:first-of-type {
       margin-top: 103px;
+      & span {
+        display: block;
+        color: var(--color-text-light);
+      }
+      @include media-tablet {
+        margin-top: 82px;
+        & span {
+          display: inline;
+        }
+      }
+    }
+
+    @include media-tablet {
+      &:last-of-type {
+        display: none;
+      }
     }
 
     span {
@@ -31,5 +67,11 @@
 
   &__img {
     margin-top: 15px;
+  }
+
+  @include media-tablet {
+    &__slider {
+      margin: 42px auto 0;
+    }
   }
 }

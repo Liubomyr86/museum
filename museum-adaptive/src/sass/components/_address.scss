@@ -9,9 +9,21 @@
 
     p {
       @include font($size: 28px, $height: 33px, $style: normal, $weight: 500);
+      @include media-tablet {
+        @include font($size: 24px, $height: 28px, $style: normal, $weight: 500);
+      }
       &:last-of-type {
         margin-top: 51px;
         @include font($size: 22px, $height: 26px, $style: normal, $weight: 300);
+        @include media-tablet {
+          margin-top: 33px;
+          @include font(
+            $size: 20px,
+            $height: 23px,
+            $style: normal,
+            $weight: 300
+          );
+        }
       }
     }
 
@@ -22,6 +34,11 @@
       @extend %transition;
       &:hover {
         color: var(--color-hover);
+      }
+
+      @include media-tablet {
+        margin-top: 15px;
+        @include font($size: 20px, $height: 23px, $style: normal, $weight: 300);
       }
     }
   }

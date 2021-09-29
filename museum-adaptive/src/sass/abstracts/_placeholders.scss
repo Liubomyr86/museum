@@ -18,6 +18,9 @@
   right: 0;
   height: 3px;
   background-color: var(--color-main-btn);
+  @include media-tablet {
+    bottom: -25px;
+  }
 }
 
 %underline-book-title {

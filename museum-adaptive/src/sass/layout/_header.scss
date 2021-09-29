@@ -5,5 +5,12 @@
     display: flex;
     justify-content: space-between;
     padding: 59px 0 47px;
+    @include media-desctop {
+      padding: 59px 35px 47px;
+    }
+
+    @include media-tablet {
+      padding: 59px 20px 42px;
+    }
   }
 }

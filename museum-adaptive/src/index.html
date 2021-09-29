@@ -29,14 +29,29 @@
           </a>
         </div>
         <nav class="header__navigation">
-          <ul class="navigation">
-            <li class="navigation__link"><a href="#visiting">Visiting</a></li>
-            <li class="navigation__link"><a href="#explorer">Explore</a></li>
-            <li class="navigation__link"><a href="#video">Video</a></li>
-            <li class="navigation__link"><a href="#gallery">Gallery</a></li>
-            <li class="navigation__link"><a href="#tickets">Tickets</a></li>
-            <li class="navigation__link"><a href="#contacts">Contacts</a></li>
+          <ul class="navigation navigation-header">
+            <li class="navigation__link navigation__link_header">
+              <a href="#visiting">Visiting</a>
+            </li>
+            <li class="navigation__link navigation__link_header">
+              <a href="#explorer">Explore</a>
+            </li>
+            <li class="navigation__link navigation__link_header">
+              <a href="#video">Video</a>
+            </li>
+            <li class="navigation__link navigation__link_header">
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li class="navigation__link navigation__link_header">
+              <a href="#tickets">Tickets</a>
+            </li>
+            <li class="navigation__link navigation__link_header">
+              <a href="#contacts">Contacts</a>
+            </li>
           </ul>
+          <span class="hamburger">
+            <span class="hamburger__line"></span>
+          </span>
         </nav>
       </div>
     </header>
@@ -56,44 +71,40 @@
               >Discover the Louvre</a
             >
           </div>
-          <div class="welcome__slider">
-            <div class="welcome__slider-container">
-              <div class="welcome__slider-item">
+          <div class="welcome__slider slider">
+            <div class="slider__container">
+              <div class="slider__item">
                 <img src="./assets/img/welcome-slider/1.jpg" alt="picture" />
               </div>
-              <div class="welcome__slider-item">
+              <div class="slider__item">
                 <img src="./assets/img/welcome-slider/2.jpg" alt="picture" />
               </div>
-              <div class="welcome__slider-item">
+              <div class="slider__item">
                 <img src="./assets/img/welcome-slider/3.jpg" alt="picture" />
               </div>
-              <div class="welcome__slider-item">
+              <div class="slider__item">
                 <img src="./assets/img/welcome-slider/4.jpg" alt="picture" />
               </div>
-              <div class="welcome__slider-item">
+              <div class="slider__item">
                 <img src="./assets/img/welcome-slider/5.jpg" alt="picture" />
               </div>
             </div>
-            <div class="welcome__slider-controls">
+            <div class="slider__controls">
               <div class="counter">
                 <span class="counter__active">01</span>
                 <span>|</span>
                 <span>05</span>
               </div>
-              <ul class="dots welcome__slider-dots">
+              <ul class="dots slider__dots">
                 <li class="dots__item dots__item_welcome active_welcome"></li>
                 <li class="dots__item dots__item_welcome"></li>
                 <li class="dots__item dots__item_welcome"></li>
                 <li class="dots__item dots__item_welcome"></li>
                 <li class="dots__item dots__item_welcome"></li>
               </ul>
-              <div class="welcome__slider-buttons">
-                <button
-                  class="btn ico-welcome-prew welcome__slider-btn"
-                ></button>
-                <button
-                  class="btn ico-welcome-next welcome__slider-btn"
-                ></button>
+              <div class="slider__buttons">
+                <button class="btn ico-welcome-prew slider__btn"></button>
+                <button class="btn ico-welcome-next slider__btn"></button>
               </div>
             </div>
           </div>
@@ -104,73 +115,73 @@
           <h2 class="visiting__title">Virtual tour</h2>
           <div class="visiting__cards-container">
             <a class="visiting-card" href="./tour2.html" target="blank">
-              <img
-                src="./assets/img/visiting/RoyalPalace.jpg"
-                alt="Royal Palace"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/RoyalPalace.jpg"
+                  alt="Royal Palace"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Royal Palace</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
             </a>
             <a class="visiting-card" href="./tour3.html" target="blank ">
-              <img
-                src="./assets/img/visiting/DenonWing.jpg"
-                alt="Denon Wing"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/DenonWing.jpg"
+                  alt="Denon Wing"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Denon Wing</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
             </a>
             <a class="visiting-card" href="./tour4.html" target="blank">
-              <img
-                src="./assets/img/visiting/ColonnadePerrault.jpg"
-                alt="Colonnade Perrault"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/ColonnadePerrault.jpg"
+                  alt="Colonnade Perrault"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Colonnade Perrault</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
             </a>
             <a class="visiting-card" href="./tour5.html" target="blank">
-              <img
-                src="./assets/img/visiting/GreekHall.jpg"
-                alt="Greek hall"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/GreekHall.jpg"
+                  alt="Greek hall"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Greek hall</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
             </a>
             <a class="visiting-card" href="./tour6.html" target="blank">
-              <img
-                src="./assets/img/visiting/MonaLisa.jpg"
-                alt="Mona Lisa"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/MonaLisa.jpg"
+                  alt="Mona Lisa"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Mona Lisa</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
             </a>
             <a class="visiting-card" href="./tour7.html" target="blank">
-              <img
-                src="./assets/img/visiting/NightPalace.jpg"
-                alt="Night Palace"
-                class="visiting-card__img"
-                width="440"
-                height="285"
-              />
+              <div class="visiting-card__img-container">
+                <img
+                  src="./assets/img/visiting/NightPalace.jpg"
+                  alt="Night Palace"
+                  class="visiting-card__img"
+                />
+              </div>
               <h3 class="visiting-card__title">Night Palace</h3>
               <p class="visiting-card__subtitle">360° Virtual Tour</p>
               <p class="visiting-card__content">Google Street Panorama View</p>
@@ -180,31 +191,33 @@
       </section>
       <section class="explorer" id="explorer">
         <div class="container explorer__container">
-          <div class="explorer__text">
+          <div class="explorer__content">
             <h2 class="explorer__title">Picture explore</h2>
-            <p class="explorer__content">
-              Las Meninas is a 1656 painting by Diego Velázquez, the leading
-              <br />
+            <p class="explorer__text">
+              <span>
+                Las Meninas is a 1656 painting by Diego Velázquez, the leading
+              </span>
               artist of the Spanish Golden Age.
             </p>
-            <p class="explorer__content">
+            <p class="explorer__text">
               It was cleaned in 1984 to remove a <span>"yellow veil"</span> of
               dust that had gathered since the previous restoration in the 19th
               century.
             </p>
-            <p class="explorer__content">
+            <p class="explorer__text">
               The cleaning provoked furious protests, not because the picture
               had been damaged in any way, but because it looked different.
             </p>
           </div>
-
-          <img
-            src="./assets/img/explore-slider/Rectangle.png"
-            alt="picture"
-            class="explorer__img"
-            width="720"
-            height="700"
-          />
+          <div class="explorer__slider">
+            <img
+              src="./assets/img/explore-slider/Rectangle.png"
+              alt="picture"
+              class="explorer__img"
+              width="720"
+              height="700"
+            />
+          </div>
         </div>
       </section>
       <section class="video" id="video">
@@ -425,13 +438,15 @@
         <div class="container tickets__container">
           <h2 class="tickets__title">Buy tickets</h2>
           <div class="tickets__content">
-            <img
-              src="./assets/img/tickets/tickets-img.jpg"
-              alt="picture"
-              class="tickets__img"
-              width="720"
-              height="550"
-            />
+            <div class="tickets__img">
+              <img
+                src="./assets/img/tickets/tickets-img.jpg"
+                alt="picture"
+                width="720"
+                height="550"
+              />
+            </div>
+
             <div class="tickets__controls">
               <div class="tickets__type">
                 <p class="tickets__subtitle">Ticket Type</p>
@@ -529,13 +544,13 @@
               </address>
             </div>
             <div class="contacts__map">
-              <img
-                class="contacts__img"
-                src="./assets/img/map/map.jpg"
-                alt="picture"
-                width="960"
-                height="620"
-              />
+              <div class="contacts__map-container">
+                <img
+                  class="contacts__img"
+                  src="./assets/img/map/map.jpg"
+                  alt="picture"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -12,6 +12,13 @@
     grid-template-columns: 1.4fr 3.12fr 1fr;
     row-gap: 92px;
     padding: 75px 0;
+    @include media-desctop {
+      padding: 75px 35px;
+    }
+    @include media-tablet {
+      grid-template-columns: 1.4fr 2.38fr 1fr;
+      padding: 52px 20px 75px;
+    }
   }
   &__logo {
     align-items: flex-start;
