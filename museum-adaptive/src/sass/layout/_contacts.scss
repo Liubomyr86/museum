@@ -13,28 +13,46 @@
     @include media-tablet {
       margin-top: 60px;
     }
+
+    @include media-tablet-small {
+      margin-top: 40px;
+    }
   }
 
   &__content {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin: 103px 0 61px;
+    margin: 103px 0 71px;
+
     @include media-tablet {
       margin: 85px 0 61px;
+    }
+
+    @include media-tablet-small {
+      flex-direction: column;
+      margin: 63px 0 70px;
     }
   }
 
   &__address {
     margin-bottom: 20px;
+
+    @include media-tablet-small {
+      margin-bottom: 40px;
+    }
   }
 
   &__map {
     width: 100%;
     max-width: 960px;
+
     @include media-tablet {
       max-width: 694px;
+    }
+
+    @include media-tablet-small {
+      max-width: 728px;
     }
   }
 
@@ -42,7 +60,6 @@
     position: relative;
     padding-bottom: 65%;
     height: 0;
-
     overflow: hidden;
   }
 

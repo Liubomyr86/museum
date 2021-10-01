@@ -29,6 +29,7 @@
     left: 109px;
     z-index: 1;
     background: #939393;
+
     &::before {
       position: absolute;
       content: "";
@@ -37,6 +38,10 @@
       top: 25px;
       left: 0px;
       background: #161615;
+    }
+
+    @include media-tablet-small {
+      left: 138px;
     }
   }
 

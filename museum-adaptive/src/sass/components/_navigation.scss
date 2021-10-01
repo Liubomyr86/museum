@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   max-width: 800px;
+  width: 100%;
   margin: 0;
 
   &__link {
-    margin-left: 57px;
+    margin-left: 56px;
 
     &:first-child {
       margin-left: 0;
@@ -46,24 +47,85 @@
         }
       }
     }
+
+    @include media-tablet-small {
+      padding-bottom: 8px;
+    }
   }
 }
 
 .navigation-header {
   @include media-tablet {
     position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 54px;
+    padding: 0 54px;
     left: -100%;
     top: 165px;
     width: 100%;
     max-width: 180px;
     z-index: 100;
     background-color: var(--color-bg-dark);
-    transition: all 0.3s ease-out;
+
     &.open {
       left: 0;
+    }
+  }
+
+  @include media-tablet-small {
+    max-width: 768px;
+    top: 131px;
+  }
+
+  &__menu {
+    @include media-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.3s ease-out;
+    }
+
+    @include media-tablet-small {
+      margin-bottom: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  &__images {
+    display: none;
+    position: relative;
+    margin-bottom: 71px;
+    max-width: 658px;
+    width: 100%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      bottom: -36px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    @include media-tablet-small {
+      display: block;
+    }
+  }
+
+  &__big-img {
+    margin-bottom: 7px;
+  }
+
+  &__small-img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__social {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    @include media-tablet-small {
+      display: flex;
     }
   }
 }
@@ -74,6 +136,7 @@
   flex-direction: column;
   max-width: 620px;
   max-height: 155px;
+
   &__link {
     margin: 0;
     padding-bottom: 1px;
@@ -83,6 +146,18 @@
       @include media-tablet {
         padding-right: 0;
         padding-left: 25px;
+      }
+
+      @include media-tablet-small {
+        padding-right: 0;
+        padding-left: 95px;
+      }
+    }
+
+    a {
+      @include media-tablet-small {
+        @include font($size: 18px, $height: 44px, $weight: 100);
+        letter-spacing: 2px;
       }
     }
   }

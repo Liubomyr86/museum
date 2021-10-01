@@ -1,5 +1,5 @@
 const MENU_BUTTON = document.querySelector('.hamburger');
-const MENU = document.querySelector('.navigation');
+const MENU = document.querySelector('.navigation-header');
 const NAV_LINKS = document.querySelectorAll('.navigation__link');
 const welcomeContent = document.querySelector('.welcome__content')
 

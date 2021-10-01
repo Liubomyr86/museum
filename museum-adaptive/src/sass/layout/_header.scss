@@ -12,5 +12,9 @@
     @include media-tablet {
       padding: 59px 20px 42px;
     }
+
+    @include media-tablet-small {
+      padding: 59px 20px 30px;
+    }
   }
 }

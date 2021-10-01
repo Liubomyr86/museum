@@ -24,6 +24,7 @@
   /* OPTIONAL: Spacing between dots */
   margin: 0 10px;
   @extend %transition;
+
   &:hover {
     background-color: var(--color-main-btn);
   }
@@ -44,6 +45,11 @@
       height: 12px;
       width: 12px;
     }
+  }
+
+  @include media-tablet-small {
+    width: 10px;
+    height: 10px;
   }
 }
 .active {

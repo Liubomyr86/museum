@@ -29,26 +29,96 @@
           </a>
         </div>
         <nav class="header__navigation">
-          <ul class="navigation navigation-header">
-            <li class="navigation__link navigation__link_header">
-              <a href="#visiting">Visiting</a>
-            </li>
-            <li class="navigation__link navigation__link_header">
-              <a href="#explorer">Explore</a>
-            </li>
-            <li class="navigation__link navigation__link_header">
-              <a href="#video">Video</a>
-            </li>
-            <li class="navigation__link navigation__link_header">
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li class="navigation__link navigation__link_header">
-              <a href="#tickets">Tickets</a>
-            </li>
-            <li class="navigation__link navigation__link_header">
-              <a href="#contacts">Contacts</a>
-            </li>
-          </ul>
+          <div class="navigation-header">
+            <ul class="navigation navigation-header__menu">
+              <li class="navigation__link navigation__link_header">
+                <a href="#visiting">Visiting</a>
+              </li>
+              <li class="navigation__link navigation__link_header">
+                <a href="#explorer">Explore</a>
+              </li>
+              <li class="navigation__link navigation__link_header">
+                <a href="#video">Video</a>
+              </li>
+              <li class="navigation__link navigation__link_header">
+                <a href="#gallery">Gallery</a>
+              </li>
+              <li class="navigation__link navigation__link_header">
+                <a href="#tickets">Tickets</a>
+              </li>
+              <li class="navigation__link navigation__link_header">
+                <a href="#contacts">Contacts</a>
+              </li>
+            </ul>
+            <div class="navigation-header__images">
+              <div class="navigation-header__big-img">
+                <img
+                  src="./assets/img/hamburger-menu/big.jpg"
+                  alt="big-img"
+                  width="658"
+                  height="194"
+                />
+              </div>
+              <div class="navigation-header__small-img">
+                <img
+                  src="./assets/img/hamburger-menu/left.jpg"
+                  alt="left-img"
+                  width="319"
+                  height="161"
+                />
+                <img
+                  src="./assets/img/hamburger-menu/right.jpg"
+                  alt="right-img"
+                  width="319"
+                  height="161"
+                />
+              </div>
+            </div>
+            <div class="navigation-header__social">
+              <ul class="social">
+                <li class="social__link">
+                  <a
+                    class="footer__ico"
+                    href="https://www.youtube.com/user/louvre"
+                    target="_blank"
+                    ><span class="ico ico-youtube social__ico"></span
+                  ></a>
+                </li>
+                <li class="social__link">
+                  <a
+                    class="footer__ico"
+                    href="https://www.instagram.com/museelouvre/"
+                    target="_blank"
+                    ><span class="ico ico-instagram social__ico"></span
+                  ></a>
+                </li>
+                <li class="social__link">
+                  <a
+                    class="footer__ico"
+                    href="https://www.facebook.com/museedulouvre"
+                    target="_blank"
+                    ><span class="ico ico-facebook social__ico"></span
+                  ></a>
+                </li>
+                <li class="social__link">
+                  <a
+                    class="footer__ico"
+                    href="https://twitter.com/museelouvre"
+                    target="_blank"
+                    ><span class="ico ico-twitter social__ico"></span
+                  ></a>
+                </li>
+                <li class="social__link">
+                  <a
+                    class="footer__ico"
+                    href="https://www.pinterest.fr/museedulouvre"
+                    target="_blank"
+                    ><span class="ico ico-pinterest social__ico"></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <span class="hamburger">
             <span class="hamburger__line"></span>
           </span>
@@ -278,7 +348,7 @@
                   type="button"
                 ></button>
                 <input
-                  class="main-video__timeline progress"
+                  class="main-video__timeline progress progress_video"
                   type="range"
                   value="54"
                   min="0"

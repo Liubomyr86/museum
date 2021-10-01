@@ -4,12 +4,28 @@
   background-color: var(--color-bg-light);
   left: -200%;
   top: calc(50vh - 422.5px);
-
   transition: all 0.3s ease-out;
   z-index: 20;
 
+  @include media-tablet {
+    padding: 75px 27px 30px;
+  }
+
+  @include media-tablet-small {
+    padding: 80px 30px 40px;
+    top: calc(50vh - 739.5px);
+  }
+
   &.open {
     left: calc(50vw - 720px);
+
+    @include media-tablet {
+      left: calc(50vw - 512px);
+    }
+
+    @include media-tablet-small {
+      left: calc(50vw - 295px);
+    }
   }
 
   &__close-btn {
@@ -18,34 +34,40 @@
     right: 25px;
     width: 36px;
     height: 36px;
-
-    @include media-tablet {
-      top: 33px;
-      right: 230px;
-    }
   }
 
   &__container {
     display: flex;
     gap: 40px;
-    max-width: 970px;
+    width: 970px;
     color: var(--color-text-dark);
-  }
-  &__left,
-  &__rigth {
-    display: flex;
-    flex-direction: column;
-  }
 
-  &__left {
-    max-width: 400px;
+    @include media-tablet-small {
+      flex-direction: column;
+      width: 530px;
+      gap: 49px;
+    }
   }
 
   &__right {
     padding: 25px 30px;
-    width: 530px;
+    max-width: 590px;
+    width: 100%;
     border: 1px solid #030303;
+
+    @include media-tablet-small {
+      padding: 25px 15px;
+    }
   }
+
+  &__left {
+    max-width: 400px;
+
+    @include media-tablet-small {
+      max-width: 590px;
+    }
+  }
+
 
   &__title {
     position: relative;
@@ -54,6 +76,7 @@
     @include font($size: 50px, $height: 55px, $weight: 400);
     color: var(--color-hover);
     text-transform: uppercase;
+
     &::before {
       position: absolute;
       content: "";
@@ -70,14 +93,23 @@
     margin-bottom: 71px;
     @include font($size: 18px, $height: 21px, $weight: 400);
     color: var(--color-main-btn);
+
     &::after {
       @extend %underline-book-title;
+    }
+
+    @include media-tablet-small {
+      margin-bottom: 51px;
     }
   }
 
   &__inputs {
     display: flex;
-    gap: 20px;
+    column-gap: 20px;
+
+    @include media-tablet-small {
+      column-gap: 28px;
+    }
   }
 
   &__input {
@@ -96,7 +128,8 @@
     &_date,
     &_time {
       position: relative;
-      width: 190px;
+      max-width: 190px;
+      width: 100%;
       &::-webkit-calendar-picker-indicator {
         background-image: url("../assets/svg/ticket-form/input-arrow.svg");
         width: 17px;
@@ -124,6 +157,10 @@
           position: absolute;
           content: "";
         }
+      }
+
+      @include media-tablet-small {
+        max-width: 251px;
       }
     }
 
@@ -166,6 +203,7 @@
 
     &_name {
       &::after {
+        top: 6px;
         width: 13px;
         height: 15px;
         background-image: url("../assets/svg/ticket-form/name.svg");
@@ -173,7 +211,7 @@
     }
     &_email {
       &::after {
-        top: 17px;
+        top: 9px;
         width: 15px;
         height: 11px;
         background-image: url("../assets/svg/ticket-form/email.svg");
@@ -181,7 +219,7 @@
     }
     &_phone {
       &::after {
-        top: 11px;
+        top: 3px;
         width: 14px;
         height: 23px;
         background-image: url("../assets/svg/ticket-form/tel.svg");
@@ -200,6 +238,10 @@
     appearance: none;
     background: url("../assets/svg/ticket-form/input-arrow.svg") 96%/4.2%
       no-repeat;
+
+      @include media-tablet-small {
+        background: url('../assets/svg/ticket-form/input-arrow.svg') 97%/3.2% no-repeat;
+      }
   }
 
   &__amount {
@@ -215,6 +257,10 @@
   &__card {
     margin-top: 10px;
     height: 241px;
+
+    @include media-tablet-small {
+      margin-top: 13px;
+    }
   }
 
   &__btn {
@@ -254,6 +300,7 @@
   width: 100%;
   color: #030303;
   @include font($size: 18px, $height: 21px, $weight: 400);
+
   &::before {
     position: absolute;
     content: "";
@@ -269,5 +316,9 @@
     content: "Ticket Type";
     left: 44px;
     top: 13px;
+  }
+
+  @include media-tablet-small {
+    max-width: 590px;
   }
 }

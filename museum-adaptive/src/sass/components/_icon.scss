@@ -9,6 +9,7 @@
   height: 8px;
   -webkit-mask-image: url("../assets/svg/welcome-slider-controls/welcom-slider__btn.svg");
 }
+
 .ico-welcome-next {
   width: 30px;
   height: 8px;
@@ -21,24 +22,70 @@
   width: 220px;
   height: 220px;
   background-image: url("../assets/svg/main-video-controls/big-play.svg");
+  background-size: 220px 220px;
+
+  @include media-tablet {
+    width: 152px;
+    height: 152px;
+    background-size: 152px 152px;
+  }
+
+  @include media-tablet-small {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+  }
 }
 
 .ico-play {
   width: 23px;
   height: 30px;
   -webkit-mask-image: url("../assets/svg/main-video-controls/play.svg");
+  background-size: 23px 30px;
+
+  @include media-tablet-small {
+    width: 23px;
+    height: 29px;
+    background-size: 23px 29px;
+  }
 }
 
 .ico-sound {
   width: 38px;
   height: 30px;
   -webkit-mask-image: url("../assets/svg/main-video-controls/sound.svg");
+  background-size: 38px 30px;
+
+  @include media-tablet {
+    width: 26px;
+    height: 20px;
+    background-size: 26px 20px;
+  }
+
+  @include media-tablet-small {
+    width: 27px;
+    height: 21px;
+    background-size: 27px 21 px;
+  }
 }
 
 .ico-fullscreen {
   width: 36px;
   height: 36px;
   -webkit-mask-image: url("../assets/svg/main-video-controls/fullscreen.svg");
+  background-size: 36px 36px;
+
+  @include media-tablet {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26 px;
+  }
+
+  @include media-tablet-small {
+    width: 27px;
+    height: 27px;
+    background-size: 27px 27px;
+  }
 }
 
 // slider controls

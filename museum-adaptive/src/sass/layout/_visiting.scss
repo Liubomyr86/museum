@@ -12,6 +12,10 @@
   @include media-tablet {
     margin-top: 60px;
   }
+
+  @include media-tablet-small {
+    margin-top: 40px;
+  }
 }
 
 .visiting__cards-container {
@@ -33,6 +37,11 @@
       justify-self: start;
     }
   }
+
+  @include media-tablet-small {
+    gap: 40px 56px;
+    margin: 62px 0 83px;
+  }
 }
 
 .visiting-card {
@@ -47,9 +56,15 @@
     & img {
       max-width: 100%;
       height: auto;
+
       @include media-tablet {
         max-width: 330px;
         max-height: 215px;
+      }
+
+      @include media-tablet-small {
+        max-width: 280px;
+        max-height: 180px;
       }
     }
   }
@@ -59,10 +74,6 @@
     margin-top: 14px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    @include media-tablet {
-      margin-top: 13px;
-      letter-spacing: 3px;
-    }
 
     &::after {
       content: "";
@@ -79,19 +90,34 @@
         bottom: -12px;
       }
     }
+
+    @include media-tablet {
+      margin-top: 13px;
+      letter-spacing: 3px;
+    }
+
+    @include media-tablet-small {
+      letter-spacing: 2px;
+    }
   }
 
   &__subtitle {
     margin-top: 21px;
     @include font($weight: 200, $height: 26px);
+
     @include media-tablet {
       @include font($size: 20px, $weight: 200, $height: 23px);
+    }
+
+    @include media-tablet-small {
+      @include font($size: 18px, $weight: 200, $height: 21px);
     }
   }
 
   &__content {
     margin-top: 10px;
     @include font($size: 18px, $weight: 200, $height: 21px);
+
     @include media-tablet {
       @include font($size: 16px, $weight: 200, $height: 19px);
     }

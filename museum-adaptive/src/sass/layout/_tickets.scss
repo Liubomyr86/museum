@@ -1,6 +1,6 @@
 .tickets {
   &__container {
-    padding: 75px 0;
+    padding: 75px 0 63px;
 
     @include media-desctop {
       padding: 75px 35px;
@@ -8,6 +8,10 @@
 
     @include media-tablet {
       padding: 59px 20px 60px;
+    }
+
+    @include media-tablet-small {
+      padding: 40px 20px 40px;
     }
   }
 
@@ -31,6 +35,11 @@
       gap: 80px;
       margin-top: 85px;
     }
+
+    @include media-tablet-small {
+      gap: 60px;
+      margin-top: 65px;
+    }
   }
 
   &__img {
@@ -38,11 +47,17 @@
       max-width: 100%;
       height: auto;
     }
+
     @include media-tablet {
       overflow: hidden;
       max-height: 440px;
       max-width: 700px;
       width: 100%;
+    }
+
+    @include media-tablet-small {
+      max-height: 340px;
+      max-width: 444px;
     }
   }
 
@@ -74,6 +89,10 @@
         padding-left: 0;
         margin-bottom: 29px;
       }
+
+      @include media-tablet-small {
+        margin-bottom: 38px;
+      }
     }
   }
   &__amount-container {
@@ -90,6 +109,10 @@
     border: 0 solid var(--color-bg-dark);
     color: var(--color-bg-light);
     letter-spacing: 2px;
+
+    @include media-tablet-small {
+      @include font($size: 22px, $height: 26px, $weight: 300);
+    }
   }
 }
 
@@ -184,9 +207,14 @@
         margin-bottom: 0;
       }
     }
+
+    @include media-tablet-small {
+      margin: 10px 0 25px;
+    }
   }
   &__total {
     margin: 50px 0 60px;
+
     @include font($size: 28px, $height: 33px, $weight: 700);
     letter-spacing: 1.6px;
 
@@ -197,7 +225,11 @@
         padding-left: 14px;
       }
     }
+    @include media-tablet-small {
+      margin: 38px 0 40px;
+    }
   }
+
   &__btn {
     padding: 3px 8px;
     background-color: var(--color-bg-light);
