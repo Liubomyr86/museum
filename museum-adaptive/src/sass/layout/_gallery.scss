@@ -64,6 +64,13 @@
         height: 235px;
       }
     }
+
+    @include media-mobile {
+      max-height: 151.5vw;
+      &::after {
+        height: 112px;
+      }
+    }
   }
 
   &__inner-pictures {

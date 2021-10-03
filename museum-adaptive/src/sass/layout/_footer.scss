@@ -9,6 +9,11 @@
     @include media-tablet-small {
       bottom: 137px;
     }
+
+    @include media-mobile {
+      height: 2px;
+      // bottom: 107px;
+    }
   }
 
   &__container {
@@ -32,16 +37,32 @@
       row-gap: 38px;
       padding: 36px 20px 75px;
     }
+
+    @include media-mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(50px, 1fr);
+    row-gap: 9px;
+      padding: 30px 20px 75px;
+
+    }
   }
   &__logo {
     align-items: flex-start;
     padding-top: 10px;
+
+    @include media-mobile {
+      grid-column-end: span 2;
+    }
   }
 
   &__navigation {
     @include media-tablet-small {
       padding-top: 12px;
     }
+    @include media-mobile {
+      margin-bottom: 30px;
+    }
+
   }
 
   &__social {
@@ -53,6 +74,15 @@
       padding-right: 90px;
       margin-bottom: 31px;
     }
+
+    @include media-mobile {
+      justify-self: center;
+    grid-column-end: span 2;
+    padding-right: 0;
+    margin-bottom: 61px;
+    max-width: 260px;
+    }
+
   }
 
   &__ico {
@@ -90,12 +120,26 @@
 
       &:first-of-type {
         padding-left: 51px;
+
+        @include media-mobile {
+          display: none;
+        }
+
+
+      }
+
+      @include media-mobile {
+        @include font($size:16px, $weight: 100, $height: 22px);
       }
     }
 
     p {
       @include font($weight: 100, $height: 22px);
       letter-spacing: 2px;
+
+      @include media-mobile {
+        @include font($size:16px, $weight: 100, $height: 22px);
+      }
     }
 
     @include media-tablet-small {

@@ -52,26 +52,52 @@
             </ul>
             <div class="navigation-header__images">
               <div class="navigation-header__big-img">
-                <img
-                  src="./assets/img/hamburger-menu/big.jpg"
-                  alt="big-img"
-                  width="658"
-                  height="194"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 420px)"
+                    srcset="./assets/img/hamburger-menu/big-95w.jpg"
+                  />
+                  <source
+                    media="(min-width: 421)"
+                    srcset="./assets/img/hamburger-menu/big-658w.jpg"
+                  />
+                  <img
+                    src="./assets/img/hamburger-menu/big-658w.jpg"
+                    alt="big-img"
+                  />
+                </picture>
               </div>
               <div class="navigation-header__small-img">
-                <img
-                  src="./assets/img/hamburger-menu/left.jpg"
-                  alt="left-img"
-                  width="319"
-                  height="161"
-                />
-                <img
-                  src="./assets/img/hamburger-menu/right.jpg"
-                  alt="right-img"
-                  width="319"
-                  height="161"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 420px)"
+                    srcset="./assets/img/hamburger-menu/left-95w.jpg"
+                  />
+                  <source
+                    media="(min-width: 421px)"
+                    srcset="./assets/img/hamburger-menu/left-319w.jpg"
+                  />
+                  <img
+                    src="./assets/img/hamburger-menu/left.jpg"
+                    alt="left-img"
+                  />
+                </picture>
+              </div>
+              <div class="navigation-header__small-img">
+                <picture>
+                  <source
+                    media="(max-width: 420px)"
+                    srcset="./assets/img/hamburger-menu/right-95w.jpg"
+                  />
+                  <source
+                    media="(min-width: 421px)"
+                    srcset="./assets/img/hamburger-menu/right-319w.jpg"
+                  />
+                  <img
+                    src="./assets/img/hamburger-menu/right.jpg"
+                    alt="right-img"
+                  />
+                </picture>
               </div>
             </div>
             <div class="navigation-header__social">
@@ -280,13 +306,14 @@
             </p>
           </div>
           <div class="explorer__slider">
-            <img
-              src="./assets/img/explore-slider/Rectangle.png"
-              alt="picture"
-              class="explorer__img"
-              width="720"
-              height="700"
-            />
+            <div class="explorer__img">
+              <img
+                src="./assets/img/explore-slider/Rectangle.png"
+                alt="picture"
+                width="720"
+                height="700"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -509,12 +536,40 @@
           <h2 class="tickets__title">Buy tickets</h2>
           <div class="tickets__content">
             <div class="tickets__img">
-              <img
-                src="./assets/img/tickets/tickets-img.jpg"
-                alt="picture"
-                width="720"
-                height="550"
-              />
+              <picture>
+                <source
+                  media="(max-width:420px )"
+                  srcset="./assets/img/tickets/tickets-img-380w.jpg"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/tickets/tickets-img-444w.jpg"
+                />
+                <source
+                  media="(max-width: 1024px)"
+                  srcset="./assets/img/tickets/tickets-img-700w.jpg"
+                />
+                <source
+                  media="(min-width: 1025)"
+                  srcset="./assets/img/tickets/tickets-img-720w.jpg"
+                />
+                <img
+                  srcset="
+                    ./assets/img/tickets/tickets-img-380w.jpg 380w,
+                    ./assets/img/tickets/tickets-img-444w.jpg 444w,
+                    ./assets/img/tickets/tickets-img-700w.jpg 700w,
+                    ./assets/img/tickets/tickets-img-720w.jpg 720w
+                  "
+                  sizes="
+                (max-width: 420px) 380px,
+                (max-width: 768px) 444px,
+                (max-width: 1024px) 700px,
+                720px
+                "
+                  src="./assets/img/tickets/tickets-img-720w.jpg"
+                  alt="picture"
+                />
+              </picture>
             </div>
 
             <div class="tickets__controls">
@@ -852,10 +907,20 @@
                 </p>
               </div>
               <div class="overview__img">
-                <img
-                  src="./assets/img/tickets/tickets-form-img.jpg"
-                  alt="picture"
-                />
+                <picture>
+                  <source
+                    media="(max-width:420px )"
+                    srcset="./assets/img/tickets/tickets-form-img-120w.jpg"
+                  />
+                  <source
+                    media="(min-width: 421)"
+                    srcset="./assets/img/tickets/tickets-form-img-150w.jpg"
+                  />
+                  <img
+                    src="./assets/img/tickets/tickets-form-img-150w.jpg"
+                    alt="picture"
+                  />
+                </picture>
               </div>
             </div>
             <div class="overview__amount">
@@ -936,7 +1001,6 @@
         </div>
       </form>
     </div>
-
     <div class="overlay hiden"></div>
   </body>
 </html>

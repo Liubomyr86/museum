@@ -12,6 +12,10 @@
     @include media-tablet-small {
       margin: 40px 0 15px;
     }
+
+    @include media-mobile {
+      margin: 37px 0 19px;
+    }
   }
 
   &__title {

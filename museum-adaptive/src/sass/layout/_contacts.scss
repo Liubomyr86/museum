@@ -33,6 +33,10 @@
       flex-direction: column;
       margin: 63px 0 70px;
     }
+
+    @include media-mobile {
+      margin: 63px 0 37px;
+    }
   }
 
   &__address {

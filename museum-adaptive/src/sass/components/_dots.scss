@@ -28,6 +28,18 @@
   &:hover {
     background-color: var(--color-main-btn);
   }
+
+  @include media-tablet-small {
+    width: 10px;
+    height: 10px;
+  }
+
+  @include media-mobile {
+    width: 8px;
+    height: 8px;
+
+  }
+
   &_welcome {
     border-radius: 0;
     height: 16px;
@@ -45,11 +57,17 @@
       height: 12px;
       width: 12px;
     }
-  }
 
-  @include media-tablet-small {
-    width: 10px;
-    height: 10px;
+    @include media-tablet-small {
+      height: 12px;
+      width: 12px;
+    }
+
+    @include media-mobile {
+      margin: 0 10px 0 0;
+      width: 7px;
+      height: 7px;
+    }
   }
 }
 .active {

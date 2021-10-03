@@ -4,17 +4,22 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 59px 0 47px;
+    padding: 61px 0 53px;
+
     @include media-desctop {
-      padding: 59px 35px 47px;
+      padding: 61px 35px 53px;
     }
 
     @include media-tablet {
-      padding: 59px 20px 42px;
+      padding: 49px 20px 44px;
     }
 
     @include media-tablet-small {
-      padding: 59px 20px 30px;
+      padding: 35px 20px 30px;
+    }
+
+    @include media-mobile{
+      padding: 35px 20px 40px;
     }
   }
 }

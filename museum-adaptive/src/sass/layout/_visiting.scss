@@ -20,12 +20,12 @@
 
 .visiting__cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   gap: 76px 60px;
   margin: 103px 0 75px;
 
   @include media-tablet {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     gap: 62px 108px;
     margin: 85px 0 62px;
 
@@ -39,8 +39,18 @@
   }
 
   @include media-tablet-small {
-    gap: 40px 56px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px 55px;
     margin: 62px 0 83px;
+  }
+
+  @include media-mobile {
+    gap: 40px 56px;
+    margin: 62px 0 43px;
+    & a:nth-of-type(n) {
+      justify-self: center;
+    }
+
   }
 }
 
@@ -99,6 +109,11 @@
     @include media-tablet-small {
       letter-spacing: 2px;
     }
+
+    @include media-mobile {
+      margin-top: 19px;
+      letter-spacing: 5px;
+    }
   }
 
   &__subtitle {
@@ -111,6 +126,10 @@
 
     @include media-tablet-small {
       @include font($size: 18px, $weight: 200, $height: 21px);
+    }
+
+    @include media-mobile {
+      @include font($size: 16px, $weight: 200, $height: 19px);
     }
   }
 

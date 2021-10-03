@@ -7,14 +7,28 @@
 .ico-welcome-prew {
   width: 30px;
   height: 8px;
+  background-size: 30px 8px;
   -webkit-mask-image: url("../assets/svg/welcome-slider-controls/welcom-slider__btn.svg");
+
+  @include media-mobile {
+    width: 20px;
+    height: 8px;
+    background-size: 20px 8px;
+  }
 }
 
 .ico-welcome-next {
   width: 30px;
   height: 8px;
+  background-size: 30px 8px;
   transform: rotate(180deg);
   -webkit-mask-image: url("../assets/svg/welcome-slider-controls/welcom-slider__btn.svg");
+
+  @include media-mobile {
+    width: 20px;
+    height: 8px;
+    background-size: 20px 8px;
+  }
 }
 
 // video player controls
@@ -35,6 +49,12 @@
     height: 80px;
     background-size: 80px 80px;
   }
+
+  @include media-mobile {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+  }
 }
 
 .ico-play {
@@ -47,6 +67,12 @@
     width: 23px;
     height: 29px;
     background-size: 23px 29px;
+  }
+
+  @include media-mobile {
+    width: 13.6px;
+    height: 17.7px;
+    background-size: 13.6px 17.7px;
   }
 }
 
@@ -67,6 +93,12 @@
     height: 21px;
     background-size: 27px 21 px;
   }
+
+  @include media-mobile {
+    width: 18px;
+    height: 14px;
+    background-size: 18px 14px;
+  }
 }
 
 .ico-fullscreen {
@@ -86,13 +118,26 @@
     height: 27px;
     background-size: 27px 27px;
   }
+
+  @include media-mobile {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
 }
 
 // slider controls
 .ico-prev {
   width: 10px;
   height: 12px;
+  background-size: 10px 12px;
   -webkit-mask-image: url("../assets/svg/video-slider-controls/video-control.svg");
+
+  @include media-mobile {
+  width: 7px;
+  height: 8px;
+  background-size: 7px 8px;
+  }
 }
 
 .ico-next {
@@ -100,6 +145,12 @@
   height: 12px;
   transform: rotate(180deg);
   -webkit-mask-image: url("../assets/svg/video-slider-controls/video-control.svg");
+
+  @include media-mobile {
+    width: 7px;
+    height: 8px;
+    background-size: 7px 8px;
+    }
 }
 
 // social icons

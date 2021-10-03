@@ -2,6 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include font($size: 28px, $height: 31px, $weight: 400);
+
+  @include media-tablet-small {
+    @include font($size: 28px, $height: 50px, $weight: 400);
+  }
+
+  @include media-mobile {
+    @include font($size: 16px, $height: 18px, $weight: 400);
+  }
 
   &__link {
     text-decoration: none;
@@ -10,10 +19,13 @@
         background-color: var(--color-hover);
         color: var(--color-hover);
       }
+
       .logo__text {
         color: var(--color-hover);
       }
+
     }
+
   }
 
   &__img {
@@ -21,22 +33,31 @@
     width: 49px;
     height: 26px;
     background-color: var(--color-bg-light);
+    background-size: 49px 26px;
     -webkit-mask-image: url("../assets/svg/logo.svg");
-    mask-size: cover;
+    -webkit-mask-size: cover;
     @extend %transition;
 
     &:hover {
       background-color: var(--color-hover);
+    }
+
+    @include media-mobile {
+      width: 29px;
+      height: 16px;
+      background-size: 29px 16px;
     }
   }
 
   &__text {
     margin-left: 20px;
     @extend %font-title;
-    @include font($size: 28px, $height: 31px, $weight: 400);
     color: var(--color-text-light);
     text-transform: uppercase;
     letter-spacing: 5px;
     @extend %transition;
+
+
   }
+
 }

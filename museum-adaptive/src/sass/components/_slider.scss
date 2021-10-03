@@ -13,6 +13,11 @@
       max-width: 728px;
     }
 
+    @include media-mobile {
+      margin-bottom: 16px;
+      max-width: 380px;
+    }
+
     &::before {
       position: absolute;
       content: "";
@@ -47,6 +52,10 @@
       @include media-tablet-small {
         max-width: 728px;
       }
+
+      @include media-mobile {
+        max-width: 380px;
+      }
     }
   }
 
@@ -65,7 +74,7 @@
 
     @include media-tablet {
       gap: 45px;
-      padding-left: 150px;
+      padding-left: 155px;
       max-width: 700px;
     }
 
@@ -74,6 +83,13 @@
       padding-left: 25px;
       margin-bottom: 14px;
       height: 70px;
+    }
+
+    @include media-mobile {
+      gap:23px;
+      padding-left: 0;
+      margin-bottom: 20px;
+      height: 40px;
     }
   }
 
@@ -84,12 +100,16 @@
   &__buttons {
     display: flex;
     gap: 20px;
+
+    @include media-mobile {
+      gap: 14px;
+    }
   }
 
   &__btn {
     border: 0;
     background-color: var(--color-bg-light);
-    mask-size: cover;
+    -webkit-mask-size: cover;
     @extend %transition;
     &:hover {
       background-color: var(--color-hover);
