@@ -1,6 +1,7 @@
 const MENU_BUTTON = document.querySelector('.hamburger');
 const MENU = document.querySelector('.navigation-header');
 const NAV_LINKS = document.querySelectorAll('.navigation__link');
+const SOC_LINKS = document.querySelectorAll('.social__link');
 const welcomeContent = document.querySelector('.welcome__content')
 
 const hamburgerListner = () => {
@@ -18,6 +19,9 @@ const hamburgerListner = () => {
 
   MENU_BUTTON.addEventListener('click', menuOpen);
   NAV_LINKS.forEach((link) => {
+    link.addEventListener('click', menuClose);
+  });
+  SOC_LINKS.forEach((link) => {
     link.addEventListener('click', menuClose);
   });
 }

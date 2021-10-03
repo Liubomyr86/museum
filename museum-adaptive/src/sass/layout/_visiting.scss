@@ -41,7 +41,7 @@
   @include media-tablet-small {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px 55px;
-    margin: 62px 0 83px;
+    margin: 62px 0 81px;
   }
 
   @include media-mobile {

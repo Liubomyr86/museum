@@ -6,8 +6,12 @@
     bottom: 148px;
     background-color: #666666;
 
+    @include media-tablet {
+      bottom: 123px;
+    }
+
     @include media-tablet-small {
-      bottom: 137px;
+      bottom: 100px;
     }
 
     @include media-mobile {
@@ -28,22 +32,21 @@
 
     @include media-tablet {
       grid-template-columns: 1.4fr 2.38fr 1fr;
-      padding: 52px 20px 75px;
+      padding: 52px 20px 51px;
     }
 
     @include media-tablet-small {
       grid-template-columns: 297px 1fr;
       grid-template-rows: minmax(100px, 1fr);
-      row-gap: 38px;
-      padding: 36px 20px 75px;
+      row-gap: 30px;
+    padding: 27px 20px 46px;
     }
 
     @include media-mobile {
       grid-template-columns: 1fr;
       grid-template-rows: minmax(50px, 1fr);
-    row-gap: 9px;
-      padding: 30px 20px 75px;
-
+      row-gap: 9px;
+      padding: 30px 20px 39px;
     }
   }
   &__logo {

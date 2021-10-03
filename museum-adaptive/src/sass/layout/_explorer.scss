@@ -6,19 +6,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    // gap: 60px;
-    padding: 75px 0 63px;
+    padding: 75px 0 77px;
 
     @include media-desctop {
       padding: 75px 35px;
     }
 
     @include media-tablet {
-      padding: 60px 20px 49px;
+      padding: 60px 20px 59px;
     }
 
     @include media-tablet-small {
-      padding: 40px 20px 38px;
+      padding: 40px 20px 46px;
     }
 
     @include media-mobile {
@@ -86,7 +85,7 @@
     max-width: 720px;
 
     @include media-tablet {
-        margin: 42px auto 0;
+        margin: 57px auto 0;
     }
 
     @include media-tablet-small {
