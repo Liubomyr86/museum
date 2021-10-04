@@ -3,7 +3,7 @@
   background-color: var(--color-bg-dark);
   &::after {
     @extend %underline-title;
-    bottom: 148px;
+    bottom: 123px;
     background-color: #666666;
 
     @include media-tablet {
@@ -14,9 +14,8 @@
       bottom: 100px;
     }
 
-    @include media-mobile {
+    @include media-660px {
       height: 2px;
-      // bottom: 107px;
     }
   }
 
@@ -24,10 +23,10 @@
     display: grid;
     grid-template-columns: 1.4fr 3.12fr 1fr;
     row-gap: 92px;
-    padding: 75px 0;
+    padding: 75px 0 50px;
 
     @include media-desctop {
-      padding: 75px 35px;
+      padding: 75px 35px 50px;
     }
 
     @include media-tablet {
@@ -39,21 +38,26 @@
       grid-template-columns: 297px 1fr;
       grid-template-rows: minmax(100px, 1fr);
       row-gap: 30px;
-    padding: 27px 20px 46px;
+      padding: 27px 20px 46px;
+    }
+
+    @include media-660px {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(50px, 1fr);
+
+      padding: 30px 20px 39px;
     }
 
     @include media-mobile {
-      grid-template-columns: 1fr;
-      grid-template-rows: minmax(50px, 1fr);
       row-gap: 9px;
-      padding: 30px 20px 39px;
     }
   }
+
   &__logo {
     align-items: flex-start;
     padding-top: 10px;
 
-    @include media-mobile {
+    @include media-660px {
       grid-column-end: span 2;
     }
   }
@@ -62,10 +66,10 @@
     @include media-tablet-small {
       padding-top: 12px;
     }
-    @include media-mobile {
+
+    @include media-660px {
       margin-bottom: 30px;
     }
-
   }
 
   &__social {
@@ -78,14 +82,13 @@
       margin-bottom: 31px;
     }
 
-    @include media-mobile {
+    @include media-660px {
       justify-self: center;
-    grid-column-end: span 2;
-    padding-right: 0;
-    margin-bottom: 61px;
-    max-width: 260px;
+      grid-column-end: span 2;
+      padding-right: 0;
+      margin-bottom: 61px;
+      max-width: 260px;
     }
-
   }
 
   &__ico {
@@ -124,14 +127,12 @@
       &:first-of-type {
         padding-left: 51px;
 
-        @include media-mobile {
+        @include media-660px {
           display: none;
         }
-
-
       }
 
-      @include media-mobile {
+      @include media-660px {
         @include font($size:16px, $weight: 100, $height: 22px);
       }
     }
@@ -140,7 +141,7 @@
       @include font($weight: 100, $height: 22px);
       letter-spacing: 2px;
 
-      @include media-mobile {
+      @include media-660px {
         @include font($size:16px, $weight: 100, $height: 22px);
       }
     }

@@ -16,6 +16,10 @@
     top: calc(50vh - 739.5px);
   }
 
+  @include media-mobile {
+    top: calc(50vh - 877px);
+  }
+
   &.open {
     left: calc(50vw - 720px);
 
@@ -270,6 +274,10 @@
 
       @include media-tablet-small {
         background: url('../assets/svg/ticket-form/input-arrow.svg') 97%/3.2% no-repeat;
+      }
+
+      @include media-mobile {
+        background: url('../assets/svg/ticket-form/input-arrow.svg') 97%/4.7% no-repeat;
       }
   }
 

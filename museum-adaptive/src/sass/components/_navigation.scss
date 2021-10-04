@@ -203,12 +203,16 @@
   align-items: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
-  max-width: 620px;
+  max-width: 530px;
   max-height: 155px;
 
-  @include media-mobile {
+  @include media-660px {
     align-items: center;
+    margin: 0 auto;
     max-width: 380px;
+  }
+
+  @include media-mobile {
     opacity: 0.6;
     max-height: 100px;
   }
@@ -219,8 +223,6 @@
     line-height: 50px;
 
     &:nth-child(n + 4) {
-      padding-right: 88px;
-
       @include media-tablet {
         padding-right: 0;
         padding-left: 25px;
@@ -243,7 +245,7 @@
       }
     }
 
-    @include media-mobile{
+    @include media-660px {
       line-height: 19px;
 
       &:nth-child(n) {
@@ -270,5 +272,6 @@
         padding-right: 15px;
       }
     }
+
   }
 }

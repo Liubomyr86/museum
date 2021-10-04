@@ -38,10 +38,23 @@
     }
   }
 
+  @include media-810px {
+    gap: 40px 55px;
+  }
+
   @include media-tablet-small {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px 55px;
     margin: 62px 0 81px;
+  }
+
+  @include media-660px {
+    gap: 40px 56px;
+    margin: 62px 0 43px;
+    & a:nth-of-type(n) {
+      justify-self: center;
+    }
+
   }
 
   @include media-mobile {

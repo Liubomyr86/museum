@@ -41,6 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
     column-gap: 50px;
     min-height: 85px;
     background-color: var(--color-text-dark);
@@ -55,6 +56,7 @@
       flex-wrap: wrap;
       align-items: baseline;
       column-gap: 35px;
+      padding: 0;
     }
 
     @include media-mobile {
@@ -175,7 +177,8 @@
 
 .progress {
   height: 8px;
-  width: 100%;
+
+  flex-grow: 1;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
@@ -186,6 +189,7 @@
 
   &_video {
     max-width: 930px;
+
     background: linear-gradient(
       to right,
       #710707 0%,
@@ -202,11 +206,13 @@
       order: -1;
       align-self: flex-start;
       max-width: 728px;
+      width: 100%;
     }
   }
 
   &_volume {
     max-width: 155px;
+
     background: linear-gradient(
       to right,
       #710707 0%,
