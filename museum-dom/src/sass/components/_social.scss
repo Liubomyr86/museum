@@ -1,0 +1,22 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 340px;
+  margin: 0;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    @include media-tablet {
+      margin-bottom: 12px;
+    }
+  }
+  &__ico {
+    border: 0;
+    background-color: var(--color-bg-light);
+    -webkit-mask-size: cover;
+    @extend %transition;
+  }
+}

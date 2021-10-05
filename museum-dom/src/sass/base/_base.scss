@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("#{$roboto-font-path}/Roboto-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("#{$roboto-font-path}/Roboto-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("#{$roboto-font-path}/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("#{$roboto-font-path}/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("#{$forum-font-path}/Forum-Regular.ttf");
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %font-primary;
+  @include font;
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+
+  @include media-tablet {
+    @include font($size: 20px);
+  }
+
+  @include media-tablet-small {
+    @include font($size: 20px, $height: 40px, $weight: 400);
+  }
+  @include media-mobile {
+    @include font($size: 16px, $height: 18px, $weight: 400);
+}
+}
+
+h2 {
+  @extend %font-title;
+  @include font($size: 80px, $height: 90px, $weight: 400);
+
+  @include media-tablet {
+    @include font($size: 50px, $height: 75px, $weight: 400);
+  }
+
+  @include media-tablet-small {
+    @include font($size: 40px, $height: 60px, $weight: 400);
+  }
+
+  @include media-mobile {
+    @include font($size: 28px, $height: 40px, $weight: 400);
+  }
+}
+
+h3 {
+  @extend %font-title;
+  @include font($size: 32px, $height: 35px, $weight: 400);
+
+  @include media-tablet {
+    @include font($size: 28px, $height: 31px, $weight: 400);
+  }
+
+  @include media-tablet-small {
+    @include font($size: 24px, $height: 24px, $weight: 400);
+  }
+
+  @include media-mobile {
+    @include font($size: 18px, $height: 20px, $weight: 400);
+  }
+}
+
+h4 {
+  @extend %font-title;
+}
+
+iframe {
+  border: 0;
+}

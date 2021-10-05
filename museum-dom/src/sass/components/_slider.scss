@@ -1,0 +1,118 @@
+.slider {
+  &__container {
+    position: relative;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+
+    @include media-tablet {
+      max-width: 700px;
+    }
+
+    @include media-tablet-small {
+      max-width: 728px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 16px;
+      max-width: 380px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.5) 16.19%,
+        rgba(0, 0, 0, 0) 30.73%
+      );
+
+      @include media-tablet-small {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    aspect-ratio: 4/ 3;
+
+    & img {
+      max-width: 1000px;
+
+      @include media-tablet {
+        max-width: 700px;
+      }
+
+      @include media-tablet-small {
+        max-width: 728px;
+      }
+
+      @include media-mobile {
+        max-width: 380px;
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: -47px;
+    right: 0;
+    max-width: 600px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    background-color: var(--color-bg-dark);
+
+    @include media-tablet {
+      gap: 45px;
+      padding-left: 155px;
+      max-width: 700px;
+    }
+
+    @include media-tablet-small {
+      position: static;
+      padding-left: 25px;
+      margin-bottom: 17px;
+      height: 70px;
+    }
+
+    @include media-mobile {
+      gap:23px;
+      padding-left: 0;
+      margin-bottom: 20px;
+      height: 40px;
+    }
+  }
+
+  &__dots {
+    padding-right: 4px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+
+    @include media-mobile {
+      gap: 14px;
+    }
+  }
+
+  &__btn {
+    border: 0;
+    background-color: var(--color-bg-light);
+    -webkit-mask-size: cover;
+    @extend %transition;
+    &:hover {
+      background-color: var(--color-hover);
+    }
+  }
+}

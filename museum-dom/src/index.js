@@ -1,0 +1,5 @@
+import './sass/style.scss'
+import createGallery from './js/gallery'
+import changeValue from './js/video'
+import {clickBtn, rippleEffect} from './js/ticket'
+import hamburgerListner from './js/hamburger'

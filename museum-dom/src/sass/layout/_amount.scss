@@ -1,0 +1,59 @@
+.amount {
+  &__title {
+    position: relative;
+    margin-bottom: 21px;
+    text-transform: capitalize;
+    @include font($size: 18px, $height: 20px, $weight: 400);
+    color: var(--color-hover);
+    &::after {
+      @extend %underline-book-title;
+      bottom: -5px;
+      height: 2px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 4px;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #030303;
+    border-bottom: 1px solid #030303;
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      appearance: none;
+    }
+  }
+
+  &__btn,
+  &__input {
+    padding: 0;
+    width: 35px;
+    height: 23px;
+    border: 0;
+    @include font($size: 18px, $height: 21px, $weight: 400);
+    text-align: center;
+  }
+
+  &__btn {
+    background: #030303;
+    color: var(--color-text-light);
+  }
+
+  &__input {
+    color: #030303;
+  }
+}

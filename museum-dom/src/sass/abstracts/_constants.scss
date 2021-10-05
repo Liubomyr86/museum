@@ -1,0 +1,28 @@
+:root {
+  --color-bg-dark: #030303;
+  --color-bg-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-light: #ffffff;
+  --color-hover: #9d8665;
+  --color-active: #7e6c51;
+  --color-main-btn: #710707;
+  --color-social-border: #666666;
+  --color-dot: #999999;
+  --color-dot-active: #333333;
+  --color-video-imput: #c4c4c4;
+  --color-main-video-controls: #b3b3b3;
+  --color-main-video-controls-hover: #989898;
+  --color-welcom-dot-active: #d2b183;
+  --color-underline-book-title: rgba(116, 12, 17, 0.9);
+  --color-card-input-border: #a4a4a3;
+}
+
+//FONT PATH
+$roboto-font-path: "../assets/fonts/Roboto";
+$forum-font-path: "../assets/fonts/Forum";
+
+//CONTENT WIDTH
+$content-width: 1440px;
+$tablet-width: 1024px;
+$tablet-small-width: 768px;
+$mobile-width: 420px;

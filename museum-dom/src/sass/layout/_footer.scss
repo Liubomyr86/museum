@@ -1,0 +1,153 @@
+.footer {
+  position: relative;
+  background-color: var(--color-bg-dark);
+  &::after {
+    @extend %underline-title;
+    bottom: 123px;
+    background-color: #666666;
+
+    @include media-tablet {
+      bottom: 123px;
+    }
+
+    @include media-tablet-small {
+      bottom: 100px;
+    }
+
+    @include media-660px {
+      height: 2px;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1.4fr 3.12fr 1fr;
+    row-gap: 92px;
+    padding: 75px 0 50px;
+
+    @include media-desctop {
+      padding: 75px 35px 50px;
+    }
+
+    @include media-tablet {
+      grid-template-columns: 1.4fr 2.38fr 1fr;
+      padding: 52px 20px 51px;
+    }
+
+    @include media-tablet-small {
+      grid-template-columns: 297px 1fr;
+      grid-template-rows: minmax(100px, 1fr);
+      row-gap: 30px;
+      padding: 27px 20px 46px;
+    }
+
+    @include media-660px {
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(50px, 1fr);
+
+      padding: 30px 20px 39px;
+    }
+
+    @include media-mobile {
+      row-gap: 9px;
+    }
+  }
+
+  &__logo {
+    align-items: flex-start;
+    padding-top: 10px;
+
+    @include media-660px {
+      grid-column-end: span 2;
+    }
+  }
+
+  &__navigation {
+    @include media-tablet-small {
+      padding-top: 12px;
+    }
+
+    @include media-660px {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    @include media-tablet-small {
+      justify-self: end;
+      grid-column-end: span 2;
+      padding-right: 90px;
+      margin-bottom: 31px;
+    }
+
+    @include media-660px {
+      justify-self: center;
+      grid-column-end: span 2;
+      padding-right: 0;
+      margin-bottom: 61px;
+      max-width: 260px;
+    }
+  }
+
+  &__ico {
+    border-radius: 50%;
+    -webkit-box-shadow: inset 0 0 0 1.5px var(--color-social-border);
+    box-shadow: inset 0 0 0 1.5px var(--color-social-border);
+    display: block;
+    height: 48px;
+    width: 48px;
+    @extend %transition;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: inset 0 0 0 1.5px var(--color-hover);
+
+      span {
+        background-color: var(--color-hover);
+      }
+    }
+  }
+  &__content {
+    grid-column-end: span 3;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: var(--color-text-light);
+      @include font($weight: 100, $height: 22px);
+      letter-spacing: 2px;
+      @extend %transition;
+
+      &:hover {
+        color: var(--color-hover);
+      }
+
+      &:first-of-type {
+        padding-left: 51px;
+
+        @include media-660px {
+          display: none;
+        }
+      }
+
+      @include media-660px {
+        @include font($size:16px, $weight: 100, $height: 22px);
+      }
+    }
+
+    p {
+      @include font($weight: 100, $height: 22px);
+      letter-spacing: 2px;
+
+      @include media-660px {
+        @include font($size:16px, $weight: 100, $height: 22px);
+      }
+    }
+
+    @include media-tablet-small {
+      grid-column-end: span 2;
+    }
+  }
+}

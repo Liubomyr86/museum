@@ -1,0 +1,8 @@
+.counter {
+  display: flex;
+  gap: 11px;
+
+  @include media-mobile {
+    gap:6px;
+  }
+}

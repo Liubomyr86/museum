@@ -1,0 +1,233 @@
+.ico {
+  cursor: pointer;
+  display: inline-block;
+}
+
+// welcome-slider-controls
+.ico-welcome-prew {
+  width: 30px;
+  height: 8px;
+  background-size: 30px 8px;
+  -webkit-mask-image: url("../assets/svg/welcome-slider-controls/welcom-slider__btn.svg");
+
+  @include media-mobile {
+    width: 20px;
+    height: 8px;
+    background-size: 20px 8px;
+  }
+}
+
+.ico-welcome-next {
+  width: 30px;
+  height: 8px;
+  background-size: 30px 8px;
+  transform: rotate(180deg);
+  -webkit-mask-image: url("../assets/svg/welcome-slider-controls/welcom-slider__btn.svg");
+
+  @include media-mobile {
+    width: 20px;
+    height: 8px;
+    background-size: 20px 8px;
+  }
+}
+
+// video player controls
+.ico-big-play {
+  width: 220px;
+  height: 220px;
+  background-image: url("../assets/svg/main-video-controls/big-play.svg");
+  background-size: 220px 220px;
+
+  @include media-tablet {
+    width: 152px;
+    height: 152px;
+    background-size: 152px 152px;
+  }
+
+  @include media-tablet-small {
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+  }
+
+  @include media-mobile {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+  }
+}
+
+.ico-play {
+  width: 23px;
+  height: 30px;
+  -webkit-mask-image: url("../assets/svg/main-video-controls/play.svg");
+  background-size: 23px 30px;
+
+  @include media-tablet-small {
+    width: 23px;
+    height: 29px;
+    background-size: 23px 29px;
+  }
+
+  @include media-mobile {
+    width: 13.6px;
+    height: 17.7px;
+    background-size: 13.6px 17.7px;
+  }
+}
+
+.ico-sound {
+  width: 38px;
+  height: 30px;
+  -webkit-mask-image: url("../assets/svg/main-video-controls/sound.svg");
+  background-size: 38px 30px;
+
+  @include media-tablet {
+    width: 26px;
+    height: 20px;
+    background-size: 26px 20px;
+  }
+
+  @include media-tablet-small {
+    width: 27px;
+    height: 21px;
+    background-size: 27px 21 px;
+  }
+
+  @include media-mobile {
+    width: 18px;
+    height: 14px;
+    background-size: 18px 14px;
+  }
+}
+
+.ico-fullscreen {
+  width: 36px;
+  height: 36px;
+  -webkit-mask-image: url("../assets/svg/main-video-controls/fullscreen.svg");
+  background-size: 36px 36px;
+
+  @include media-tablet {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26 px;
+  }
+
+  @include media-tablet-small {
+    width: 27px;
+    height: 27px;
+    background-size: 27px 27px;
+  }
+
+  @include media-mobile {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
+}
+
+// slider controls
+.ico-prev {
+  width: 10px;
+  height: 12px;
+  background-size: 10px 12px;
+  -webkit-mask-image: url("../assets/svg/video-slider-controls/video-control.svg");
+
+  @include media-mobile {
+  width: 7px;
+  height: 8px;
+  background-size: 7px 8px;
+  }
+}
+
+.ico-next {
+  width: 10px;
+  height: 12px;
+  transform: rotate(180deg);
+  -webkit-mask-image: url("../assets/svg/video-slider-controls/video-control.svg");
+
+  @include media-mobile {
+    width: 7px;
+    height: 8px;
+    background-size: 7px 8px;
+    }
+}
+
+// social icons
+.ico-youtube {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../assets/svg/social/Youtube.svg");
+}
+.ico-instagram {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../assets/svg/social/Instagram.svg");
+}
+.ico-facebook {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../assets/svg/social/Facebook.svg");
+}
+.ico-twitter {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../assets/svg/social/Twitter.svg");
+}
+.ico-pinterest {
+  margin: 12px;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-image: url("../assets/svg/social/Pinterest.svg");
+}
+
+//ticket form
+.ico-date {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/ticket-form/date.svg");
+}
+
+.ico-time {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/ticket-form/time.svg");
+}
+
+// .ico-name {
+//   width: 15px;
+//   height: 15px;
+//   background-image: url("../assets/svg/ticket-form/name.svg");
+// }
+// .ico-email {
+//   width: 15px;
+//   height: 15px;
+//   background-image: url("../assets/svg/ticket-form/email.svg");
+// }
+// .ico-phone {
+//   width: 15px;
+//   height: 15px;
+//   background-image: url("../assets/svg/ticket-form/tel.svg");
+// }
+
+.ico-check {
+  width: 15px;
+  height: 15px;
+  background-image: url("../assets/svg/ticket-form/check.svg");
+}
+
+.ico-visa {
+  width: 55px;
+  height: 16px;
+  background-image: url("../assets/svg/ticket-form/visa.svg");
+}
+
+.ico-mc {
+  width: 53px;
+  height: 32px;
+  background-image: url("../assets/svg/ticket-form/mastercard.svg");
+}

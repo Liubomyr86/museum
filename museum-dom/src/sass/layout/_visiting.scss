@@ -1,0 +1,166 @@
+.visiting__title {
+  position: relative;
+  margin-top: 75px;
+  color: var(--color-hover);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  &::after {
+    @extend %underline-title;
+  }
+
+  @include media-tablet {
+    margin-top: 60px;
+  }
+
+  @include media-tablet-small {
+    margin-top: 40px;
+  }
+}
+
+.visiting__cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 76px 60px;
+  margin: 103px 0 75px;
+
+  @include media-tablet {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 62px 108px;
+    margin: 85px 0 62px;
+
+    & a:nth-of-type(2n + 1) {
+      justify-self: end;
+    }
+
+    & a:nth-of-type(2n) {
+      justify-self: start;
+    }
+  }
+
+  @include media-810px {
+    gap: 40px 55px;
+  }
+
+  @include media-tablet-small {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px 55px;
+    margin: 62px 0 81px;
+  }
+
+  @include media-660px {
+    gap: 40px 56px;
+    margin: 62px 0 43px;
+    & a:nth-of-type(n) {
+      justify-self: center;
+    }
+
+  }
+
+  @include media-mobile {
+    gap: 40px 56px;
+    margin: 62px 0 43px;
+    & a:nth-of-type(n) {
+      justify-self: center;
+    }
+
+  }
+}
+
+.visiting-card {
+  text-decoration: none;
+  color: var(--color-text-dark);
+  @extend %transition;
+
+  &__img-container {
+    width: 100%;
+    aspect-ratio: 3/ 2;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+
+      @include media-tablet {
+        max-width: 330px;
+        max-height: 215px;
+      }
+
+      @include media-tablet-small {
+        max-width: 280px;
+        max-height: 180px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-top: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      width: 300px;
+      height: 2px;
+      background-color: var(--color-main-btn);
+      @extend %transition;
+
+      @include media-tablet {
+        width: 150px;
+        bottom: -12px;
+      }
+    }
+
+    @include media-tablet {
+      margin-top: 13px;
+      letter-spacing: 3px;
+    }
+
+    @include media-tablet-small {
+      letter-spacing: 2px;
+    }
+
+    @include media-mobile {
+      margin-top: 19px;
+      letter-spacing: 5px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 21px;
+    @include font($weight: 200, $height: 26px);
+
+    @include media-tablet {
+      @include font($size: 20px, $weight: 200, $height: 23px);
+    }
+
+    @include media-tablet-small {
+      @include font($size: 18px, $weight: 200, $height: 21px);
+    }
+
+    @include media-mobile {
+      @include font($size: 16px, $weight: 200, $height: 19px);
+    }
+  }
+
+  &__content {
+    margin-top: 10px;
+    @include font($size: 18px, $weight: 200, $height: 21px);
+
+    @include media-tablet {
+      @include font($size: 16px, $weight: 200, $height: 19px);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.06);
+    @extend %transition;
+
+    .visiting-card__title::after {
+      width: 100%;
+    }
+  }
+}

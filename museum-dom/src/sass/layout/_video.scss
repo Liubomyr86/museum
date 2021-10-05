@@ -1,0 +1,35 @@
+.video {
+  &__cotainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 75px 0;
+
+    @include media-tablet {
+      margin: 60px 0 40px;
+    }
+
+    @include media-tablet-small {
+      margin: 40px 0 15px;
+    }
+
+    @include media-mobile {
+      margin: 37px 0 19px;
+    }
+  }
+
+  &__title {
+    color: var(--color-hover);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    max-width: 720px;
+    width: 100%;
+    color: var(--color-text-dark);
+    @include media-tablet {
+      display: none;
+    }
+  }
+}
