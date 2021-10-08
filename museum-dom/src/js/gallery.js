@@ -1,4 +1,5 @@
-const gallerInnerPictures = document.querySelector('.gallery__inner-pictures')
+
+const gallerInnerPictures = document.querySelector('.gallery__inner-pictures');
 
 const imgPath = [
   './assets/img/galery/galery1.jpg',
@@ -18,15 +19,71 @@ const imgPath = [
   './assets/img/galery/galery15.jpg',
 ]
 
-const createGallery = () => {
+export const createGallery = () => {
   imgPath.sort(() => Math.random() - 0.5)
   imgPath.map((elem) => {
-    const img = document.createElement('img')
-    img.classList.add('gallery__img')
-    img.src = elem
-    img.alt = 'gallery__img'
-    gallerInnerPictures.append(img)
+    const image = document.createElement('img')
+    image.classList.add('gallery__img', 'js-scroll', 'fade-in-bottom')
+    image.src = elem
+    image.alt = 'gallery__img'
+    gallerInnerPictures.append(image)
   })
 }
 
-export default createGallery()
+export const checkSlide =() => {
+  const scrollElements = document.querySelectorAll('.js-scroll');
+  let throttleTimer;
+
+  const throttle = (callback, time) => {
+    if (throttleTimer) return;
+
+    throttleTimer = true;
+    setTimeout( () => {
+      callback();
+      throttleTimer = false;
+    }, time);
+  }
+
+  const elementInView = (el, dividend = 1) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+      elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+  }
+
+  const elementOutOfView = (el) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    return (
+      elementTop > (window.innerHeight || document.documentElement.clientHeight)
+    )
+  }
+
+  const displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+  };
+
+  const hideScrollElement = (element) => {
+    element.classList.remove("scrolled");
+  };
+
+  const handleScrollAnimation = () => {
+    scrollElements.forEach((el) => {
+      if (elementInView(el, 1.25)) {
+        displayScrollElement(el);
+      } else if (elementOutOfView(el)) {
+        hideScrollElement(el)
+      }
+    })
+  }
+
+  window.addEventListener("scroll", () => {
+    throttle(() => {
+      handleScrollAnimation();
+    }, 250);
+  });
+}
+
+createGallery();
+checkSlide();

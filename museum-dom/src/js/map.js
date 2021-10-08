@@ -7,7 +7,7 @@ const mapBox = () => {
   // Replace YOUR_STYLE_URL with your style URL.
   style: "mapbox://styles/liubomyr86/ckudyyq463gjz18qjvux1ucaa",
   center: [2.3364, 48.86091],
-  zoom: 15.5,
+  zoom: 15.75,
   });
 
   // Code from the next step will go here.
@@ -41,6 +41,10 @@ const mapBox = () => {
 
    // Add zoom and rotation controls to the map.
   map.addControl(new mapboxgl.NavigationControl());
+
+  map.on('idle',function(){
+    map.resize()
+    })
 }
 
 export default mapBox()

@@ -311,23 +311,40 @@
             </p>
           </div>
           <div class="explorer__slider">
-            <div class="explorer__img">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="./assets/img/explore-slider/after-728w.jpg"
+              />
+              <source
+                media="(min-width: 769px)"
+                srcset="./assets/img/explore-slider/after-720w.jpg"
+              />
+              <img
+                src="./assets/img/explore-slider/after-720w.jpg"
+                alt="picture"
+              />
+            </picture>
+            <div class="explorer__img explorer__img-overlay">
               <picture>
                 <source
                   media="(max-width: 768px)"
-                  srcset="./assets/img/explore-slider/explorer-728w.jpg"
+                  srcset="./assets/img/explore-slider/before-728w.jpg"
                 />
                 <source
                   media="(min-width: 769px)"
-                  srcset="./assets/img/explore-slider/explorer-720w.jpg"
+                  srcset="./assets/img/explore-slider/before-720w.jpg"
                 />
                 <img
-                  src="./assets/img/explore-slider/explorer-720w.jpg"
+                  src="./assets/img/explore-slider/before-720w.jpg"
                   alt="picture"
-                  width="720"
-                  height="700"
                 />
               </picture>
+            </div>
+            <div class="explorer__handle">
+              <div class="explorer__handle-line"></div>
+              <div class="explorer__handle-circle"></div>
+              <div class="explorer__handle-line"></div>
             </div>
           </div>
         </div>
