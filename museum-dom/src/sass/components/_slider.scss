@@ -4,6 +4,7 @@
     display: flex;
     max-width: 1000px;
     width: 100%;
+    overflow: hidden;
 
     @include media-tablet {
       max-width: 700px;
@@ -39,6 +40,8 @@
   }
 
   &__item {
+    position: relative;
+    display: none;
     width: 100%;
     aspect-ratio: 4/ 3;
 
@@ -55,6 +58,53 @@
 
       @include media-mobile {
         max-width: 380px;
+      }
+    }
+
+    &.item-active,
+    &.item-next {
+      display: block;
+    }
+
+    &.item-next {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &.to-left {
+      animation: left 0.5s linear;
+    }
+
+    &.from-right {
+      animation: right 0.5s linear;
+    }
+
+    &.to-right {
+      animation: right 0.5s linear;
+      animation-direction: reverse;
+    }
+
+    &.from-left {
+      animation: left 0.5s linear;
+      animation-direction: reverse;
+    }
+
+    @keyframes left {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+
+    @keyframes right {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: 0;
       }
     }
   }
@@ -86,7 +136,7 @@
     }
 
     @include media-mobile {
-      gap:23px;
+      gap: 23px;
       padding-left: 0;
       margin-bottom: 20px;
       height: 40px;
@@ -116,3 +166,50 @@
     }
   }
 }
+
+// .active,
+// .next {
+//   display: block;
+// }
+
+// .next {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+// }
+
+// .to-left {
+//   @include animation-name(left);
+// }
+
+// .from-right {
+//   @include animation-name(right);
+// }
+
+// .to-right {
+//   @include animation-name(right);
+//   animation-direction: reverse;
+// }
+
+// .from-left {
+//   @include animation-name(left);
+//   animation-direction: reverse;
+// }
+
+// @include keyframes(left) {
+//   from {
+//     left: 0;
+//   }
+//   to {
+//     left: -100%;
+//   }
+// }
+
+// @include keyframes(right) {
+//   from {
+//     left: 100%;
+//   }
+//   to {
+//     left: 0;
+//   }
+// }

@@ -174,7 +174,7 @@
           </div>
           <div class="welcome__slider slider">
             <div class="slider__container">
-              <div class="slider__item">
+              <div class="slider__item item-active">
                 <img src="./assets/img/welcome-slider/1.jpg" alt="picture" />
               </div>
               <div class="slider__item">
@@ -197,15 +197,24 @@
                 <span>05</span>
               </div>
               <ul class="dots slider__dots">
-                <li class="dots__item dots__item_welcome active_welcome"></li>
-                <li class="dots__item dots__item_welcome"></li>
-                <li class="dots__item dots__item_welcome"></li>
-                <li class="dots__item dots__item_welcome"></li>
-                <li class="dots__item dots__item_welcome"></li>
+                <li
+                  class="dots__item dots__item_welcome active_welcome"
+                  data-index="0"
+                ></li>
+                <li class="dots__item dots__item_welcome" data-index="1"></li>
+                <li class="dots__item dots__item_welcome" data-index="2"></li>
+                <li class="dots__item dots__item_welcome" data-index="3"></li>
+                <li class="dots__item dots__item_welcome" data-index="4"></li>
               </ul>
               <div class="slider__buttons">
-                <button class="btn ico-welcome-prew slider__btn"></button>
-                <button class="btn ico-welcome-next slider__btn"></button>
+                <button
+                  class="btn ico-welcome-prew slider__btn"
+                  id="left-control"
+                ></button>
+                <button
+                  class="btn ico-welcome-next slider__btn"
+                  id="right-control"
+                ></button>
               </div>
             </div>
           </div>

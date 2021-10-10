@@ -28,7 +28,7 @@ const hamburgerListner = () => {
   SOC_LINKS.forEach((link) => {
     link.addEventListener('click', menuClose);
   });
-  main.addEventListener('click', menuOpen)
+  // main.addEventListener('click', menuOpen)
 }
 
 
