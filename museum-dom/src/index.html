@@ -368,13 +368,17 @@
             </p>
           </div>
           <div class="video-player">
-            <div class="main-video">
-              <div class="main-video__container">
+            <div class="main-video" id="main-video">
+              <span class="main-video__playbackRate" id="playbackRate"></span>
+              <div class="main-video__container" id="main-video-container">
                 <div class="main-video__item">
                   <video
-                    class="main-video__video"
+                    class="main-video__video main-video__video_active"
                     src="./assets/video/video0.webm"
                     poster="./assets/video/poster0.jpg"
+                    controls
+                    preload="metadata"
+                    data-mainVideo="0"
                   ></video>
                 </div>
                 <div class="main-video__item">
@@ -382,6 +386,9 @@
                     class="main-video__video"
                     src="./assets/video/video1.webm"
                     poster="./assets/video/poster1.jpg"
+                    controls
+                    preload="metadata"
+                    data-mainVideo="1"
                   ></video>
                 </div>
                 <div class="main-video__item">
@@ -389,6 +396,9 @@
                     class="main-video__video"
                     src="./assets/video/video2.webm"
                     poster="./assets/video/poster2.jpg"
+                    controls
+                    preload="metadata"
+                    data-mainVideo="2"
                   ></video>
                 </div>
                 <div class="main-video__item">
@@ -396,6 +406,9 @@
                     class="main-video__video"
                     src="./assets/video/video3.webm"
                     poster="./assets/video/poster3.jpg"
+                    controls
+                    preload="metadata"
+                    data-mainVideo="3"
                   ></video>
                 </div>
                 <div class="main-video__item">
@@ -403,24 +416,28 @@
                     class="main-video__video"
                     src="./assets/video/video4.webm"
                     poster="./assets/video/poster4.jpg"
+                    controls
+                    preload="metadata"
+                    data-mainVideo="4"
                   ></video>
                 </div>
               </div>
               <button
                 class="btn ico-big-play main-video__play"
                 type="button"
+                id="big-play"
               ></button>
-              <div class="main-video__controls">
+              <div class="main-video__controls" id="controls">
                 <button
                   class="btn ico-play main-video__ico"
                   type="button"
+                  id="play"
                 ></button>
                 <input
                   class="main-video__timeline progress progress_video"
                   type="range"
-                  value="54"
+                  value="0"
                   min="0"
-                  max="100"
                   step="1"
                   name="video-timeline"
                   id="timeline"
@@ -428,20 +445,21 @@
                 <button
                   class="btn ico-sound main-video__ico"
                   type="button"
+                  id="sound"
                 ></button>
                 <input
                   class="main-video__volume progress progress_volume"
                   type="range"
-                  value="40"
-                  min="0"
-                  max="100"
-                  step="1"
+                  value="1"
+                  max="1"
+                  step="0.01"
                   name="video-volume"
-                  id="volume"
+                  id="volumeline"
                 />
                 <button
                   class="btn ico-fullscreen main-video__ico"
                   type="button"
+                  id="fullscreen"
                 ></button>
               </div>
             </div>

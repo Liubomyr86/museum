@@ -1,5 +1,5 @@
 .video-player {
-  position: relative;
+  // position: relative;
   display: flex;
   flex-direction: column;
   margin: 75px 0 40px;
@@ -14,6 +14,24 @@
 }
 
 .main-video {
+  position: relative;
+
+  &__playbackRate {
+    position: absolute;
+    top: 50px;
+    display: none;
+    left: calc(50% - 50px);
+    color: rgba(255, 255, 255, 0.75);
+    z-index: 100;
+    width: 100px;
+    height: 50px;
+    background: rgba(179, 179, 179, 0.5);
+    text-align: center;
+    @include font($size: 30px, $height: 48px, $weight: 400);
+    border-radius: 5px;
+    @extend %transition;
+  }
+
   &__container {
     display: flex;
     overflow: hidden;
@@ -22,22 +40,43 @@
   &__item {
     position: relative;
     flex-shrink: 0;
-    padding-bottom: 45.14%;
+    padding-bottom: 51.04%;
     height: 0;
     width: 100%;
     overflow: hidden;
+
+    @include media-tablet {
+      padding-bottom: 51.22%;
+    }
+
+    @include media-tablet-small {
+      padding-bottom: 53.02%;
+    }
+
+    @include media-mobile {
+      padding-bottom: 59.47%;
+    }
   }
 
   &__video {
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    &_active {
+      display: block;
+    }
   }
 
   &__controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +106,7 @@
 
   &__play {
     position: absolute;
-    top: calc(50% - 233px);
+    top: calc(50% - 43px);
     right: calc(50% - 220px);
     transform: translate(-50%, -50%);
     background-color: inherit;
@@ -90,7 +129,7 @@
 
     @include media-mobile {
       right: calc(50% - 50px);
-    top: calc(50% - 132px);
+      top: calc(50% - 132px);
     }
   }
 
@@ -102,6 +141,85 @@
 
     &:hover {
       background-color: var(--color-main-video-controls-hover);
+    }
+  }
+}
+
+.progress {
+  height: 8px;
+
+  flex-grow: 1;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+
+  @include media-tablet {
+    height: 5px;
+  }
+
+  &_video {
+    // max-width: 930px;
+    background: linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 0%,
+      #c4c4c4 0%,
+      #c4c4c4 100%
+    );
+
+    @include media-tablet {
+      // max-width: 564px;
+    }
+
+    @include media-tablet-small {
+      order: -1;
+      align-self: flex-start;
+      // max-width: 728px;
+      width: 100%;
+    }
+  }
+
+  &_volume {
+    max-width: 155px;
+
+    background: linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 100%,
+      #c4c4c4 0%,
+      #c4c4c4 100%
+    );
+
+    @include media-tablet {
+      max-width: 143px;
+    }
+
+    @include media-tablet-small {
+      align-self: center;
+      max-width: 486px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 16px;
+      max-width: 200px;
+    }
+  }
+
+  &::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: #fff;
+
+    @include media-tablet {
+      width: 13px;
+      height: 13px;
+    }
+    @include media-mobile {
+      width: 10px;
+      height: 10px;
     }
   }
 }
@@ -171,87 +289,6 @@
 
     &:hover {
       background-color: var(--color-main-btn);
-    }
-  }
-}
-
-.progress {
-  height: 8px;
-
-  flex-grow: 1;
-  outline: none;
-  transition: background 450ms ease-in;
-  -webkit-appearance: none;
-
-  @include media-tablet {
-    height: 5px;
-  }
-
-  &_video {
-    max-width: 930px;
-
-    background: linear-gradient(
-      to right,
-      #710707 0%,
-      #710707 54%,
-      #c4c4c4 54%,
-      #c4c4c4 100%
-    );
-
-    @include media-tablet {
-      max-width: 564px;
-    }
-
-    @include media-tablet-small {
-      order: -1;
-      align-self: flex-start;
-      max-width: 728px;
-      width: 100%;
-    }
-  }
-
-  &_volume {
-    max-width: 155px;
-
-    background: linear-gradient(
-      to right,
-      #710707 0%,
-      #710707 40%,
-      #c4c4c4 40%,
-      #c4c4c4 100%
-    );
-
-    @include media-tablet {
-      max-width: 143px;
-    }
-
-    @include media-tablet-small {
-      align-self: center;
-      max-width: 486px;
-    }
-
-    @include media-mobile {
-      margin-bottom: 16px;
-      max-width: 200px;
-
-    }
-  }
-
-  &::-webkit-slider-thumb {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    -webkit-appearance: none;
-    cursor: ew-resize;
-    background: #fff;
-
-    @include media-tablet {
-      width: 13px;
-      height: 13px;
-    }
-    @include media-mobile {
-      width: 10px;
-      height: 10px;
     }
   }
 }
